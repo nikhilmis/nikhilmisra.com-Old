@@ -1,0 +1,224 @@
+
+* { box-sizing: border-box; }
+
+@font-face {
+  font-family: 'MenoeGrotesquePro';
+  src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  }
+
+@font-face {
+    font-family: 'MenoeGrotesqueProItalic';
+    src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    }
+
+header{
+  font-family: 'MenoeGrotesquePro',monospace;
+  color:#000000;
+  letter-spacing: 0.02px;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  padding: 25px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.Info{
+  position: absolute;
+  top: 25px;
+  right: 25px;}
+
+body{
+  font-family: 'MenoeGrotesquePro',monospace;
+  background:#FEFCF7;
+  color: #000000;
+  letter-spacing: 0.02px;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+a {
+    color:#000000;
+    text-decoration: none;
+}
+
+
+
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.workfooter{
+  font-size: 18px;
+  margin: 125px 0 0 100px;
+}
+
+.workfooter li a {
+  display: inline-block;
+}
+
+.workfooter li a:hover {
+  font-style: italic;
+}
+
+.workfooter li a:after {
+  content: '';
+  display: block;
+  height: 1.8px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.workfooter li a:hover:after{
+  width: 100%;
+  background: #000000;
+
+}
+
+li {
+  margin: 0 0 20px 0;
+}
+
+
+#project {
+    text-align: left;
+    font-size: 20px;
+    margin: 30px 100px 0px 100px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project_title{
+  width: 230px;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+.project_description{
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 600px;
+}
+.project_content{
+  margin-top: 80px;
+  width: 100%;
+}
+
+.project_image{
+    display: block;
+    width:100%;
+    padding: 0 0 65px 0;
+}
+
+.project_image img{
+  width: 100%;
+  display: table;
+}
+.slide{
+  width: 100%;
+  display: block;
+}
+
+.caption{
+  margin: 35px 115px 0 115px;
+}
+.caption2{
+  margin: 20px 115px 0px 115px;
+  text-align: center;
+}
+.footer{
+    margin: 0 0 10px 0;
+
+}
+
+.hero_wrapper {
+  height: 80vh;
+}
+
+.hero_container {
+  width: 100%;
+}
+
+.hero_container.offwhite {
+  background: #FEFCF7;
+  margin: 150px 0px 100px 0px;
+}
+
+.hero_container img {
+  max-height: 250px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: 100px auto;
+  display: table;
+}
+
+.slick-arrow{
+height:100%;
+width: 50%;
+z-index: 100;
+top: 0;
+position: absolute;
+
+}
+.slick-arrow, .slick-arrow .cursor-arrow{
+  cursor: none;
+}
+.slick-arrow:hover .cursor-arrow{
+  display: block;
+
+}
+.slick-next{
+right: -100px;
+
+}
+.slick-prev{
+left: -100px;
+}
+
+.slick-arrow.slick-next .cursor-arrow{
+  background-image: url(./../img/next.svg);
+}
+.slick-arrow.slick-prev .cursor-arrow{
+  background-image: url(./../img/prev.svg);
+}
+
+.cursor-arrow{
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  display: none;
+  margin: -25px 0 0 -25px;
+  pointer-events: none;
+}
+
+
+header a, .myname, .Info {
+  color: #000;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #project{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .project_title, .project_description, .workfooter, .caption, .caption2{
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

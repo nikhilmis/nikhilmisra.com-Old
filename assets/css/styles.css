@@ -1,0 +1,187 @@
+
+* { box-sizing: border-box; }
+
+@font-face {
+  font-family: 'MenoeGrotesquePro';
+  src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  }
+
+@font-face {
+    font-family: 'MenoeGrotesqueProItalic';
+    src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    }
+
+header{
+  font-family: 'MenoeGrotesquePro',monospace;
+  color:#FFFFFF;
+  letter-spacing: 0.02px;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  padding: 25px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+
+
+.Info{
+  position: absolute;
+  top: 25px;
+  right: 25px;}
+
+body{
+  font-family: 'MenoeGrotesquePro',monospace;
+  background:#000000;
+  color: #FFFFFF;
+  letter-spacing: 0.02px;
+  padding-top:30px;
+}
+
+a {
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+.work{
+  font-size: 32px;
+  margin: 125px 0 0 100px;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work li {
+  margin: 0 0 20px 0;
+}
+
+.work li a {
+  display: inline-block;
+}
+
+.work li a:hover {
+  font-style: italic;
+}
+
+.work img {
+  width: 1000px;
+  position: fixed;
+  top: 200px;
+  left: 400px;
+  opacity:0;
+  z-index: -1;
+  transition: opacity 600ms;
+  transform: translate(-50%,-50%);
+}
+
+.work li a:hover img {
+  opacity: 1;
+}
+
+
+.work li a:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.work li a:hover:after{
+  width: 100%;
+  background: #FFFFFF;
+
+}
+
+
+
+.aboutme{
+  text-align: left;
+  font-size: 20px;
+  margin: 150px 350px 100px 100px;
+  line-height: 1.5;
+  position:relative;
+  z-index: 2;
+}
+
+
+.findme{
+  text-align: left;
+  font-size: 20px;
+  padding-top: -40px;
+  margin: 100px 0px 0px 100px;
+}
+.findmelinks li{
+  margin-top: 10px;
+  padding: 2px;
+}
+
+
+.meme{
+  position:relative;
+}
+
+.foundme{
+  position:absolute;
+  right: 150px;
+  top: 75px;
+  z-index: 1;
+}
+.foundme img{
+  width: 372px;
+}
+.foundme .animated {
+  display:none;
+}
+.foundme:hover .animated{
+  display:block;
+}
+.foundme:hover .static{
+  display:none;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .work{
+      margin: 125px 25px 0 0;
+      font-size: 28px
+  }
+  .aboutme{
+    text-align: left;
+    font-size: 16px;
+    margin: 125px 0 0 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 1.5;
+    position:relative;
+    z-index: 2;
+  }
+  .foundme .animated {
+    display:block;
+  }
+
+  .foundme .static{
+    display:none;
+  }
+  .foundme{
+    position:absolute;
+    left: 100px;
+    top: 125px;
+    z-index: 1;
+  }
+  .findme{
+    text-align: left;
+    font-size: 16px;
+    padding-top: -40px;
+    margin: 75px 0 0 0;
+    padding-left: 25px;
+    padding-right: 25px;
+
+  }
+
+}

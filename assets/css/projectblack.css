@@ -1,0 +1,161 @@
+
+* { box-sizing: border-box; }
+
+@font-face {
+  font-family: 'MenoeGrotesquePro';
+  src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  }
+
+@font-face {
+    font-family: 'MenoeGrotesqueProItalic';
+    src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    }
+
+header{
+  font-family: 'MenoeGrotesquePro',monospace;
+  color: #FEFCF7;
+  letter-spacing: 0.02px;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  padding: 25px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+header a {
+  color: #FEFCF7;
+}
+header.invert a {
+  color:#000;
+
+}
+.Info{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+body{
+  font-family: 'MenoeGrotesquePro',monospace;
+  background:#FEFCF7;
+  color: #000000;
+  letter-spacing: 0.02px;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+a {
+    color:#000000;
+    text-decoration: none;
+}
+
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.workfooter{
+  font-size: 18px;
+  margin: 125px 0 0 100px;
+}
+
+.workfooter li a {
+  display: inline-block;
+}
+
+.workfooter li a:hover {
+  font-style: italic;
+}
+
+.workfooter li a:after {
+  content: '';
+  display: block;
+  height: 1.8px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.workfooter li a:hover:after{
+  width: 100%;
+  background: #000000;
+
+}
+
+li {
+  margin: 0 0 20px 0;
+}
+
+
+#project {
+    text-align: left;
+    font-size: 20px;
+    margin: 30px 100px 0px 100px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project_title{
+  width: 230px;
+  padding-bottom: 30px;
+}
+.project_description{
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 600px;
+}
+.project_content{
+  margin-top: 80px;
+  width: 100%;
+}
+
+.project_image{
+    display: block;
+    width:100%;
+    padding: 0 0 65px 0;
+}
+
+.project_image img{
+  width: 100%;
+  display: table;
+}
+.caption{
+  margin: 30px 115px 0 115px;
+}
+.footer{
+    margin: 0 0 10px 0;
+
+}
+
+.hero_wrapper {
+  height: 80vh;
+  background: #000000;
+}
+
+.hero_container {
+  width: 100%;
+  background: #000000;
+}
+
+.hero_container.black {
+  background: #000000;
+  padding:50px 50px 50px 50px;
+  width: 100%;
+}
+
+.hero_container img {
+  max-height: 250px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: 100px auto;
+  display: table;
+}
