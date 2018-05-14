@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'MenoeGrotesqueProItalic';
-    src: url('assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    src: url('http://www.nikhilmisra.com/assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
     }
 
 header{
@@ -199,6 +199,9 @@ ul, li {
   right: 150px;
   top: 75px;
   z-index: -1;
+}
+.foundme img{
+  width: 372px;
 }
 .foundme img{
   width: 372px;
