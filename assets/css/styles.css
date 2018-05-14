@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'MenoeGrotesquePro';
-  src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  src: url('/Users/nikhilmisra/nikhilmisra.com/assets/fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
   }
 
 @font-face {
     font-family: 'MenoeGrotesqueProItalic';
-    src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    src: url('assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
     }
 
 header{
@@ -24,6 +24,28 @@ header{
   z-index: 100;
 }
 
+header a:hover {
+  font-style: italic;
+}
+
+header a{
+  display: inline-block;
+}
+
+header a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+header a:hover:after{
+  width: 100%;
+  background: #FFFFFF;
+
+}
 
 
 .Info{
@@ -108,19 +130,65 @@ ul, li {
   position:relative;
   z-index: 2;
 }
+.aboutme a:hover {
+  font-style: italic;
+}
 
+.aboutme a{
+  display: inline-block;
+}
+
+.aboutme a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.aboutme a:hover:after{
+  width: 100%;
+  background: #FFFFFF;
+
+}
 
 .findme{
   text-align: left;
   font-size: 20px;
   padding-top: -40px;
-  margin: 100px 0px 0px 100px;
+  margin: 100px 0px 20px 100px;
 }
+
+
 .findmelinks li{
   margin-top: 10px;
   padding: 2px;
 }
 
+.findmelinks a{
+  display: inline-block;
+}
+
+.findmelinks a:hover{
+  font-style: italic;
+}
+
+
+.findmelinks a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.findmelinks a:hover:after{
+  width: 100%;
+  background: #FFFFFF;
+
+}
 
 .meme{
   position:relative;
@@ -130,7 +198,7 @@ ul, li {
   position:absolute;
   right: 150px;
   top: 75px;
-  z-index: 1;
+  z-index: -1;
 }
 .foundme img{
   width: 372px;
@@ -145,11 +213,13 @@ ul, li {
   display:none;
 }
 
+
+
 @media only screen and (max-width: 600px) {
 
   .work{
       margin: 125px 25px 0 0;
-      font-size: 28px
+      font-size: 24px
   }
   .aboutme{
     text-align: left;
@@ -172,7 +242,7 @@ ul, li {
     position:absolute;
     left: 100px;
     top: 125px;
-    z-index: 1;
+    z-index: -1;
   }
   .findme{
     text-align: left;

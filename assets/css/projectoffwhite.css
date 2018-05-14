@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'MenoeGrotesquePro';
-  src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  src: url('/Users/nikhilmisra/nikhilmisra.com/assets/fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
   }
 
 @font-face {
     font-family: 'MenoeGrotesqueProItalic';
-    src: url('/Users/nikhilmisra/nikhilmis.github.io/Portfolio Site/assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    src: url('assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
     }
 
 header{
@@ -24,6 +24,30 @@ header{
   z-index: 100;
 }
 
+header a {
+  color: #000;
+  display: inline-block;
+}
+
+
+header a:hover {
+  font-style: italic;
+}
+
+header a:after {
+  content: '';
+  display: block;
+  height: 1.8px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+header a:hover:after{
+  width: 100%;
+  background: #000;
+
+}
 .Info{
   position: absolute;
   top: 25px;
@@ -55,13 +79,21 @@ ul, li {
   padding: 0;
 }
 
+.footernav{
+  background: black;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
 .workfooter{
   font-size: 18px;
-  margin: 125px 0 0 100px;
+  margin: 50px 0 0 100px;
+
 }
 
 .workfooter li a {
   display: inline-block;
+  color: white;
 }
 
 .workfooter li a:hover {
@@ -79,7 +111,7 @@ ul, li {
 
 .workfooter li a:hover:after{
   width: 100%;
-  background: #000000;
+  background: white;
 
 }
 
@@ -193,8 +225,8 @@ left: -100px;
 }
 
 .cursor-arrow{
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   background-repeat: no-repeat;
   background-position: center;
   position: fixed;
@@ -203,13 +235,119 @@ left: -100px;
   pointer-events: none;
 }
 
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 20px;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+
+.slick-dots li button {
+    font-size: 10px;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
 
 header a, .myname, .Info {
   color: #000;
 }
 
 
+
+
 @media only screen and (max-width: 600px) {
+
   #project{
     margin-left: 0;
     margin-right: 0;
@@ -220,5 +358,7 @@ header a, .myname, .Info {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    font-size: 18px;
+
   }
 }
