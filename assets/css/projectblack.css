@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'MenoeGrotesquePro';
-  src: url('/Users/nikhilmisra/nikhilmisra.com/assets/fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  src: url('./../fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
   }
 
 @font-face {
     font-family: 'MenoeGrotesqueProItalic';
-    src: url('assets/fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    src: url('./../fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
     }
 
 header{
