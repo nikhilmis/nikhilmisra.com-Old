@@ -130,6 +130,7 @@ ul, li {
   position:relative;
   z-index: 2;
 }
+
 .aboutme a:hover {
   font-style: italic;
 }
@@ -150,7 +151,6 @@ ul, li {
 .aboutme a:hover:after{
   width: 100%;
   background: #FFFFFF;
-
 }
 
 .findme{
@@ -218,7 +218,7 @@ ul, li {
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
 
   .work{
       margin: 125px 25px 0 0;
