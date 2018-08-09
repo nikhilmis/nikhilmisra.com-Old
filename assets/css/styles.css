@@ -124,7 +124,7 @@ ul, li {
 
 .aboutme{
   text-align: left;
-  font-size: 20px;
+  font-size: 26px;
   margin: 150px 350px 100px 100px;
   line-height: 1.5;
   position:relative;
@@ -155,7 +155,7 @@ ul, li {
 
 .findme{
   text-align: left;
-  font-size: 20px;
+  font-size: 26px;
   padding-top: -40px;
   margin: 100px 0px 20px 100px;
 }
@@ -203,9 +203,7 @@ ul, li {
 .foundme img{
   width: 372px;
 }
-.foundme img{
-  width: 372px;
-}
+
 .foundme .animated {
   display:none;
 }
