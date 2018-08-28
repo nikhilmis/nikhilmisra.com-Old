@@ -188,8 +188,11 @@ li {
   margin: 35px 115px 0 115px;
 }
 .caption2{
-  margin: 20px 115px 0px 115px;
-  text-align: center;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 35px 100px 0px 0px;
+  width: 600px;
 }
 .footer{
     margin: 0 0 10px 0;
