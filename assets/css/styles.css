@@ -217,7 +217,7 @@ ul, li {
 
 
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1125px) {
 
   .work{
       margin: 125px 25px 0 0;
@@ -225,13 +225,14 @@ ul, li {
   }
   .aboutme{
     text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     margin: 125px 0 0 0;
     padding-left: 25px;
     padding-right: 25px;
     line-height: 1.5;
     position:relative;
     z-index: 2;
+    width: 525px;
   }
   .foundme .animated {
     display:block;
@@ -242,13 +243,15 @@ ul, li {
   }
   .foundme{
     position:absolute;
-    left: 100px;
+    left: 200px;
     top: 125px;
     z-index: -1;
+    width: 150px;
+    height:auto;
   }
   .findme{
     text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     padding-top: -40px;
     margin: 75px 0 0 0;
     padding-left: 25px;
