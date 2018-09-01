@@ -156,6 +156,10 @@ li {
   width: 230px;
   padding-bottom: 30px;
 }
+.sub{
+  font-size: 16px;
+  margin-top: 10px;
+}
 .project_description{
   text-align: left;
   font-size: 20px;
