@@ -126,7 +126,7 @@ ul, li {
 
 .aboutme{
   text-align: left;
-  font-size: 32px;
+  font-size: 30px;
   margin: 100px 350px 100px 100px;
   line-height: 1.5;
   position:relative;
@@ -228,20 +228,21 @@ ul, li {
 
 
 @media only screen and (max-width: 1125px) {
-
+  .myname{
+    width: 300px;
+  }
   .work{
       margin: 125px 25px 0 0;
-      font-size: 24px
   }
   .aboutme{
     text-align: left;
-    font-size: 20px;
-    margin: 125px 0 0 0;
+    margin: 125px 200px 0 0;
     padding-left: 25px;
     padding-right: 25px;
     line-height: 1.5;
     position:relative;
     z-index: 2;
+    width; 500PX;
   }
   .foundme .animated {
     display:block;
@@ -259,11 +260,11 @@ ul, li {
   }
   .findme{
     text-align: left;
-    font-size: 20px;
     padding-top: -40px;
     margin: 75px 0 0 0;
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 25px
+    width:800px;
 
   }
 
