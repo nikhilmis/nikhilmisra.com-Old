@@ -158,9 +158,14 @@ li {
 }
 .sub{
   margin-top: 10px;
+  font-size: 18px;
+  width: 300px;
+
 }
 .duration{
   margin-top: 10px;
+  font-size: 18px;
+
 }
 .project_description{
   text-align: left;

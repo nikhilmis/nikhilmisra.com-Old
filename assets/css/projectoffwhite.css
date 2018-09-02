@@ -134,6 +134,17 @@ li {
   padding-bottom: 30px;
   font-size: 20px;
 }
+.sub{
+  margin-top: 10px;
+  font-size: 18px;
+  width: 300px;
+
+}
+.duration{
+  margin-top: 10px;
+  font-size: 18px;
+
+}
 .project_description{
   text-align: left;
   font-size: 20px;
