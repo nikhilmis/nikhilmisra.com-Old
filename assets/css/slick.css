@@ -123,5 +123,6 @@
       font-family: 'slick';
       font-size: 22px;
       line-height: 20px;
+      letter-spacing: 10px;
       ...
   }
