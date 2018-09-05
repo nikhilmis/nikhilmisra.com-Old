@@ -15,7 +15,8 @@ header{
   font-family: 'MenoeGrotesquePro',monospace;
   color:#FFFFFF;
   letter-spacing: 0.02px;
-  font-size: 18px;
+  font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1800 - 300)));
+
   position: fixed;
   width: 100%;
   padding: 25px;
@@ -67,7 +68,7 @@ a {
 }
 
 .work{
-  font-size: 32px;
+  font-size: calc(32px + (40 - 32) * ((100vw - 300px) / (1800 - 300)));
   margin: 125px 0 0 100px;
 }
 
@@ -162,7 +163,7 @@ ul, li {
 
 .foundme{
   position:absolute;
-  right: 150px;
+  right: 200px;
   top: 75px;
   z-index: -1;
 }
@@ -228,17 +229,19 @@ ul, li {
 
 
 @media only screen and (max-width: 1125px) {
+  .thoughtful{
+    display: none;
+  }
   .myname{
-    width: 300px;
+    width: 200px;
     font-size: 4
   }
   .work{
       margin: 125px 25px 0 0;
-      font-size: 40px;
   }
   .aboutme{
     text-align: left;
-    margin: 125px 0 0 0;
+    margin: 125px 0px 0 0;
     padding-left: 25px;
     padding-right: 25px;
     line-height: 1.5;
