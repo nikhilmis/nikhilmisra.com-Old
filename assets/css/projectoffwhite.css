@@ -372,7 +372,7 @@ header a, .myname, .Info {
 
 
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1125px) {
 
   #project{
     margin-left: 0;
