@@ -15,7 +15,7 @@ header{
   font-family: 'MenoeGrotesquePro',monospace;
   color:#000000;
   letter-spacing: 0.02px;
-  font-size: 18px;
+  font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1800 - 300)));
   position: fixed;
   width: 100%;
   padding: 25px;
