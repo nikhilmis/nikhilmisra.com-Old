@@ -15,7 +15,7 @@ header{
   font-family: 'MenoeGrotesquePro',monospace;
   color: #FEFCF7;
   letter-spacing: 0.02px;
-  font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1800 - 300)));
+  font-size: 18px;
   position: fixed;
   width: 100%;
   padding: 25px;
@@ -78,13 +78,14 @@ header.invert a:hover:after{
   right: 25px;
 }
 
-body{
+html, body{
   font-family: 'MenoeGrotesquePro',monospace;
   background:#FEFCF7;
   color: #000000;
   letter-spacing: 0.02px;
   margin: 0;
   padding: 0;
+  font-size: 20px;
 
 }
 
@@ -109,7 +110,7 @@ ul, li {
 }
 
 .workfooter{
-  font-size: 18px;
+  font-size: .9em;
   margin: 50px 0 0 100px;
 
 }
@@ -145,7 +146,7 @@ li {
 
 #project {
     text-align: left;
-    font-size: 20px;
+    font-size: 1em;
     margin: 30px 100px 0px 100px;
     display:flex;
     flex-wrap: wrap;
@@ -158,18 +159,18 @@ li {
 }
 .sub{
   margin-top: 10px;
-  font-size: 18px;
+  font-size: .9em;
   width: 300px;
 
 }
 .duration{
   margin-top: 10px;
-  font-size: 18px;
+  font-size: .9em;
 
 }
 .project_description{
   text-align: left;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 1.5;
   width: 600px;
 }
@@ -200,7 +201,7 @@ li {
 }
 .caption2{
   text-align: left;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 1.5;
   margin: 35px 100px 0px 0px;
   width: 600px;
@@ -251,11 +252,11 @@ position: absolute;
 
 }
 .slick-next{
-right: -100px;
+right: 0;
 
 }
 .slick-prev{
-left: -100px;
+left: 0;
 }
 
 .slick-arrow.slick-next .cursor-arrow{
@@ -382,6 +383,10 @@ left: -100px;
 
 @media only screen and (max-width: 1125px) {
 
+  .html body{
+    font-size: 1.3em;
+  }
+
   #project{
     margin-left: 0;
     margin-right: 0;
@@ -392,7 +397,6 @@ left: -100px;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    font-size: 18px;
 
   }
 }

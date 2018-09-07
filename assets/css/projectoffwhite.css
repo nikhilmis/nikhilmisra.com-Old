@@ -15,7 +15,7 @@ header{
   font-family: 'MenoeGrotesquePro',monospace;
   color:#000000;
   letter-spacing: 0.02px;
-  font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1800 - 300)));
+  font-size: 18px;
   position: fixed;
   width: 100%;
   padding: 25px;
@@ -53,15 +53,19 @@ header a:hover:after{
   top: 25px;
   right: 25px;}
 
-body{
+html, body{
   font-family: 'MenoeGrotesquePro',monospace;
   background:#FEFCF7;
   color: #000000;
   letter-spacing: 0.02px;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
 
 }
+
 
 
 
@@ -132,22 +136,22 @@ li {
 .project_title{
   width: 300px;
   padding-bottom: 30px;
-  font-size: 20px;
+  font-size: 1em;
 }
 .sub{
   margin-top: 10px;
-  font-size: 18px;
+  font-size: .9em;
   width: 300px;
 
 }
 .duration{
   margin-top: 10px;
-  font-size: 18px;
+  font-size: .9em;
 
 }
 .project_description{
   text-align: left;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 1.5;
   width: 600px;
 }
@@ -172,14 +176,14 @@ li {
 }
 .subssection{
   text-align: left;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 1.5;
   margin: 35px 100px 10px 0px;
   width: 300px;
 }
 .caption{
   text-align: left;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 1.5;
   margin: 10px 100px 0px 0px;
   width: 600px;
@@ -187,7 +191,7 @@ li {
 
 .caption2{
   text-align: left;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 1.5;
   margin: 35px 100px 0px 0px;
   width: 600px;
@@ -373,7 +377,9 @@ header a, .myname, .Info {
 
 
 @media only screen and (max-width: 1125px) {
-
+  .html body{
+    font-size: 1.3em;
+  }
   #project{
     margin-left: 0;
     margin-right: 0;
@@ -384,7 +390,17 @@ header a, .myname, .Info {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    font-size: 18px;
+  }
+  .slick-arrow:hover .cursor-arrow{
+    display: none;
 
   }
+  .slick-next{
+  right: 0;
+
+  }
+  .slick-prev{
+  left: 0;
+  }
+
 }
