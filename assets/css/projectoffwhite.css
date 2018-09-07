@@ -216,7 +216,7 @@ li {
   max-width: 100%;
   height: auto;
   width: auto;
-  margin: 0;
+  margin: auto;
   display: table;
 }
 
