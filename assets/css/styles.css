@@ -171,14 +171,9 @@ ul, li {
 }
 
 .foundme .animated {
-  display:none;
-}
-.foundme:hover .animated{
   display:block;
 }
-.foundme:hover .static{
-  display:none;
-}
+
 
 .findme{
   text-align: left;
@@ -223,6 +218,9 @@ ul, li {
   width: 200px;
   font-size: 26px;
 }
+
+
+
 
 
 
