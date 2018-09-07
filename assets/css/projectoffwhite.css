@@ -208,7 +208,7 @@ li {
 
 .hero_container.offwhite {
   background: #FEFCF7;
-  margin: 150px 0px 100px 0px;
+  padding: 150px 0px 100px 0px;
 }
 
 .hero_container img {
@@ -216,7 +216,7 @@ li {
   max-width: 100%;
   height: auto;
   width: auto;
-  margin: 100px auto;
+  margin: 0;
   display: table;
 }
 
