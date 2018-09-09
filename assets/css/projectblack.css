@@ -400,3 +400,17 @@ left: 0;
 
   }
 }
+
+.slick-arrow:hover .cursor-arrow{
+  display: none;
+
+}
+.slick-next{
+right: 0;
+
+}
+.slick-prev{
+left: 0;
+}
+
+}
