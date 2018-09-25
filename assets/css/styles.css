@@ -272,8 +272,14 @@ ul, li {
   text-decoration: underline;
   }
 
-  .aboutme a:hover {
-   display: none;
+
+  .aboutme a:after {
+  display: none;
   }
+
+  .aboutme a:hover:after{
+    display: none;
+  }
+
 
 }
