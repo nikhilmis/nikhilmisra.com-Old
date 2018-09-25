@@ -70,7 +70,7 @@ a {
 
 .work{
   font-size: calc(32px + (40 - 32) * ((100vw - 300px) / (1800 - 300)));
-  margin: 125px 0 0 100px;
+  margin: 175px 0 0 100px;
 }
 
 ul, li {
@@ -164,7 +164,7 @@ ul, li {
 
 .foundme{
   position:absolute;
-  right: 250px;
+  right: 220px;
   top: 75px;
   z-index: -1;
 }
@@ -270,6 +270,10 @@ ul, li {
 
   .aboutme a{
   text-decoration: underline;
+  }
+
+  .aboutme a:hover {
+   display: none;
   }
 
 }
