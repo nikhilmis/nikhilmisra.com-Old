@@ -165,7 +165,7 @@ ul, li {
 .foundme{
   position:absolute;
   right: 220px;
-  top: 75px;
+  top: 230px;
   z-index: -1;
 }
 
@@ -256,7 +256,7 @@ ul, li {
   .foundme{
     position:absolute;
     left: 10px;
-    top: 125px;
+    top: 270px;
     z-index: -1;
   }
 
