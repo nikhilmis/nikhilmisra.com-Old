@@ -1,18 +1,19 @@
 
 * { box-sizing: border-box; }
 
+
 @font-face {
-  font-family: 'MenoeGrotesquePro';
-  src: url('./../fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  font-family: 'GerstnerProgramm';
+  src: url('./../fonts/GerstnerProgramm.otf'); /* IE9 Compat Modes */
   }
 
 @font-face {
-    font-family: 'MenoeGrotesqueProItalic';
-    src: url('./../fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    font-family: 'GerstnerProgrammItalic';
+    src: url('./../fonts/GerstnerProgrammItalic.otf'); /* IE9 Compat Modes */
     }
 
 header{
-  font-family: 'MenoeGrotesquePro',monospace;
+  font-family: 'GerstnerProgramm',sans-serif;
   color:#000000;
   letter-spacing: 0.02px;
   font-size: 18px;
@@ -54,7 +55,7 @@ header a:hover:after{
   right: 25px;}
 
 html, body{
-  font-family: 'MenoeGrotesquePro',monospace;
+  font-family: 'GerstnerProgramm',sans-serif;
   background:#FEFCF7;
   color: #000000;
   letter-spacing: 0.02px;
@@ -151,7 +152,7 @@ li {
 
 #project {
     text-align: left;
-    font-size: 1em;
+    font-size: 18px;
     margin: 30px 100px 0px 100px;
     display:flex;
     flex-wrap: wrap;
@@ -164,18 +165,18 @@ li {
 }
 .sub{
   margin-top: 10px;
-  font-size: .9em;
+  font-size: 18px;
   width: 300px;
 
 }
 .duration{
   margin-top: 10px;
-  font-size: .9em;
+  font-size: 18px;
 
 }
 .project_description{
   text-align: left;
-  font-size: 1em;
+  font-size: 18px;
   line-height: 1.5;
   width: 600px;
 }

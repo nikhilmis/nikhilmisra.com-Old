@@ -2,17 +2,18 @@
 * { box-sizing: border-box; }
 
 @font-face {
-  font-family: 'MenoeGrotesquePro';
-  src: url('./../fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  font-family: 'GerstnerProgramm';
+  src: url('./../fonts/GerstnerProgramm.otf'); /* IE9 Compat Modes */
   }
 
 @font-face {
-    font-family: 'MenoeGrotesqueProItalic';
-    src: url('./../fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    font-family: 'GerstnerProgrammItalic';
+    src: url('./../fonts/GerstnerProgrammItalic.otf'); /* IE9 Compat Modes */
     }
 
+
 header{
-  font-family: 'MenoeGrotesquePro',monospace;
+  font-family: 'GerstnerProgramm',sans-serif;
   color: #FEFCF7;
   letter-spacing: 0.02px;
   font-size: 18px;
@@ -79,7 +80,7 @@ header.invert a:hover:after{
 }
 
 html, body{
-  font-family: 'MenoeGrotesquePro',monospace;
+  font-family: 'GerstnerProgramm',sans-serif;
   background:#FEFCF7;
   color: #000000;
   letter-spacing: 0.02px;
