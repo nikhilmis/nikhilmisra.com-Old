@@ -2,19 +2,19 @@
 * { box-sizing: border-box; }
 
 @font-face {
-  font-family: 'MenoeGrotesquePro';
-  src: url('./../fonts/MenoeGrotesquePro-Regular.otf'); /* IE9 Compat Modes */
+  font-family: 'GerstnerProgramm';
+  src: url('./../fonts/GerstnerProgramm.otf'); /* IE9 Compat Modes */
   }
 
 @font-face {
-    font-family: 'MenoeGrotesqueProItalic';
-    src: url('./../fonts/MenoeGrotesquePro-Italic.otf'); /* IE9 Compat Modes */
+    font-family: 'GerstnerProgrammItalic';
+    src: url('./../fonts/GerstnerProgrammItalic.otf'); /* IE9 Compat Modes */
     }
 
 header{
-  font-family: 'MenoeGrotesquePro',monospace;
+  font-family: 'GerstnerProgramm',sans-serif;
   color:#FFFFFF;
-  letter-spacing: 0.02px;
+  letter-spacing: 1px;
   font-size: 18px;
   position: fixed;
   width: 100%;
@@ -56,10 +56,10 @@ header a:hover:after{
   right: 25px;}
 
 body{
-  font-family: 'MenoeGrotesquePro',monospace;
+  font-family: 'GerstnerProgramm',sans-serif;
   background:#000000;
   color: #FFFFFF;
-  letter-spacing: 0.02px;
+  letter-spacing: 1px;
   padding-top:30px;
 }
 
@@ -69,8 +69,8 @@ a {
 }
 
 .work{
-  font-size: calc(32px + (40 - 32) * ((100vw - 300px) / (1800 - 300)));
-  margin: 175px 0 0 100px;
+  font-size: 28px;
+  margin: 140px 0 0 100px;
 }
 
 ul, li {
@@ -110,7 +110,7 @@ ul, li {
 .work li a:after {
   content: '';
   display: block;
-  height: 3px;
+  height: 1.2px;
   width: 0;
   background: transparent;
   transition: width .5s ease, background-color .5s ease;
@@ -128,12 +128,12 @@ ul, li {
 
 .aboutme{
   text-align: left;
-  font-size: 30px;
+  font-size: 22px;
   margin: 100px 350px 100px 100px;
   line-height: 1.5;
   position:relative;
   z-index: 2;
-  width: 825px;
+  width: 550px;
 }
 
 .aboutme a:hover {
@@ -164,13 +164,14 @@ ul, li {
 
 .foundme{
   position:absolute;
-  right: 220px;
-  top: 230px;
+  right: 200px;
+  left: 200px;
+  top: 0px;
   z-index: -1;
 }
 
 .foundme img{
-  width: 372px;
+  width: 1000px;
 }
 
 .foundme .animated {
@@ -180,15 +181,15 @@ ul, li {
 
 .findme{
   text-align: left;
-  font-size: 32px;
+  font-size: 22px;
   padding-top: -40px;
   margin: 75px 0px 20px 100px;
-  width: 500px;
+  width: 550px;
 }
 
 
 .findmelinks li{
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 2px;
 }
 
@@ -215,13 +216,6 @@ ul, li {
   background: #FFFFFF;
 
 }
-
-.bymefam{
-  margin: 100px 0px 20px 100px;
-  width: 200px;
-  font-size: 26px;
-}
-
 
 
 
