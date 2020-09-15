@@ -9,8 +9,6 @@ $(".work li a").on("mouseover", function() {
   document.documentElement.style.setProperty('--underline-width', `${underlineWidth}px`);
 })
 
-
-
 $('.slides').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
