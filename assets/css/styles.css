@@ -16,25 +16,27 @@
   src: url("./../fonts/GerstnerProgrammItalic.otf"); /* IE9 Compat Modes */
 }
 
-header {
+body {
+  font-size: 18px;
   font-family: "GerstnerProgramm", sans-serif;
+  background: #000000;
   color: #ffffff;
   letter-spacing: 1px;
-  font-size: 18px;
-  position: fixed;
-  width: 100%;
-  padding: 25px;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
+  padding-top: 55px;
+  margin: 0 150px;
+} 
 
-header a:hover {
-  font-style: italic;
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
 header a {
   display: inline-block;
+}
+
+header a:hover {
+  font-style: italic;
 }
 
 header a:after {
@@ -51,31 +53,9 @@ header a:hover:after {
   background: #ffffff;
 }
 
-.mobile {
-  display: none;
-}
-.Info {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-}
-
-body {
-  font-family: "GerstnerProgramm", sans-serif;
-  background: #000000;
-  color: #ffffff;
-  letter-spacing: 1px;
-  padding-top: 30px;
-}
-
 a {
   color: #ffffff;
   text-decoration: none;
-}
-
-.work {
-  font-size: 20px;
-  margin: 140px 100px 0px 250px;
 }
 
 ul,
@@ -83,6 +63,10 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.work {
+  margin-top: 100px;
 }
 
 .work li {
@@ -142,6 +126,10 @@ li {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+}
+
+.mobile {
+  display: none;
 }
 
 .myname {
