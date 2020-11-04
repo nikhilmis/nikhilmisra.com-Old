@@ -159,8 +159,8 @@ li {
   display: block;
   height: 2px;
   width: 0;
-  background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
+  background: #ffffff;
+  width: 100%;
 }
 
 .aboutme a:hover:after {
@@ -208,14 +208,6 @@ li {
   font-style: italic;
 }
 
-.findmelinks a:after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
-}
 
 .findmelinks a:hover:after {
   width: 100%;
