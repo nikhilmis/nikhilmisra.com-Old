@@ -17,14 +17,19 @@
 }
 
 body {
-  font-size: 18px;
+  font-size: 24px;
   font-family: "GerstnerProgramm", sans-serif;
   background: #000000;
   color: #ffffff;
   letter-spacing: 1px;
   padding-top: 55px;
-  margin: 0 150px;
 } 
+
+@media (min-width: 480px) {
+  body {
+    margin: 0 150px;
+  }
+}
 
 header {
   display: flex;
@@ -126,6 +131,17 @@ li {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+}
+
+@media (min-width: 480px) {
+  .work-items .work-items-tags {
+    margin-left: 100px;
+  }
+}
+
+
+.work-items .work-item-year {
+  justify-content: flex-end;
 }
 
 .mobile {
