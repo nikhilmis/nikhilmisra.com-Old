@@ -11,12 +11,10 @@
     src: url('./../fonts/GerstnerProgrammItalic.otf'); /* IE9 Compat Modes */
     }
 
-
 header{
   font-family: 'GerstnerProgramm',sans-serif;
   color: #FEFCF7;
   letter-spacing: 0.02px;
-  font-size: 18px;
   position: fixed;
   width: 100%;
   padding: 25px;
@@ -87,7 +85,7 @@ html, body{
   margin: 0;
   padding: 0;
   font-size: 20px;
-
+  font-size: 24px;
 }
 
 
@@ -136,7 +134,6 @@ ul, li {
 }
 
 .workfooter{
-  font-size: .9em;
   margin: 50px 0 0 100px;
 
 }
@@ -172,7 +169,6 @@ li {
 
 #project {
     text-align: left;
-    font-size: 1em;
     margin: 30px 100px 0px 100px;
     display:flex;
     flex-wrap: wrap;
@@ -227,7 +223,6 @@ li {
 }
 .caption2{
   text-align: left;
-  font-size: 1em;
   line-height: 1.5;
   margin: 35px 100px 0px 0px;
   width: 600px;

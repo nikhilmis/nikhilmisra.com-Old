@@ -155,7 +155,7 @@ li {
 .aboutme {
   text-align: left;
   font-size: 22px;
-  margin: 100px 350px 100px 100px;
+  margin: 100px 350px 100px 0;
   line-height: 1.5;
   position: relative;
   z-index: 2;
@@ -207,7 +207,7 @@ li {
   text-align: left;
   font-size: 22px;
   padding-top: -40px;
-  margin: 75px 0px 20px 100px;
+  margin: 75px 0px 20px 0;
   width: 550px;
 }
 
