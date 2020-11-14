@@ -225,9 +225,13 @@ li {
 }
 
 
-.findmelinks a:hover:after {
-  width: 100%;
+.findmelinks a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
   background: #ffffff;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1125px) {
