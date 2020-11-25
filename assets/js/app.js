@@ -2,13 +2,6 @@ $(".work li a").mousemove(function(e) {
   $(this).find("img").css("top",e.clientY+50+"px").css("left",e.clientX+350+"px");
 })
 
-$(".work li a").on("mouseover", function() {
-  const firstItem = $(this).find(".work-items");
-  const lastItem = $(this).find(".work-item-end");
-  const underlineWidth = lastItem.offset().left - firstItem.offset().left;
-  document.documentElement.style.setProperty('--underline-width', `${underlineWidth}px`);
-})
-
 $('.slides').slick({
   slidesToShow: 1,
   slidesToScroll: 1,

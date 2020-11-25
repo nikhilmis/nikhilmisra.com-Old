@@ -60,7 +60,7 @@ html, body{
   letter-spacing: 0.02px;
   margin: 0;
   padding: 0;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 a {
@@ -188,7 +188,6 @@ li {
 .video-style{
   width: 100%;
   display: block;
-  vertical-align: center;
 }
 
 .caption{
