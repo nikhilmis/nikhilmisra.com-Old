@@ -63,6 +63,12 @@ html, body{
   font-size: 24px;
 }
 
+::selection {
+  color: white;
+  background-color: black;
+}
+
+
 a {
     color:#000000;
     text-decoration: none;
