@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: "GerstnerProgramm";
-  src: url("./../fonts/GerstnerProgramm.otf"); /* IE9 Compat Modes */
+  src: url("./../fonts/GerstnerProgrammRegular.otf"); /* IE9 Compat Modes */
 }
 
 @font-face {
   font-family: "GerstnerProgrammItalic";
-  src: url("./../fonts/GerstnerProgrammItalic.otf"); /* IE9 Compat Modes */
+  src: url("./../fonts/GerstnerProgrammRegularItalic.otf"); /* IE9 Compat Modes */
 }
 
 body {

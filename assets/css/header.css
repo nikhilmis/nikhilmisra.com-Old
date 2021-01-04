@@ -1,19 +1,33 @@
 .header {
   display: flex;
   justify-content: space-between;
+  transition: cubic-bezier();
+}
+
+.header > * {
+  max-width: 33%;
 }
 
 .header a {
   display: inline-block;
 }
 
-.header a:after {
+.header a:after,
+.header-expand-bio:after {
   content: "";
   display: block;
   height: 2px;
   width: 0;
   background: #ffffff;
   width: 100%;
+}
+
+.header-expand-bio {
+  display: inline-block;
+}
+
+.header-expand-bio:hover {
+  font-style: italic;
 }
 
 .header-bio,
@@ -27,8 +41,8 @@
   top: 3px;
 }
 
-.header-bio-paragraph {
-  max-width: 57ch;
+.header-hide {
+  display: none;
 }
 
 @media (max-width: 960px) {

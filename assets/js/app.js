@@ -1,3 +1,11 @@
+$(".header-expand-bio").on('click', function() {
+  const moreText = "(...More Information)";
+  const hideText = "(Hide Information...)";
+  $(this).html($(this).html() === moreText ? hideText : moreText);
+  $(".header-expanded-bio").toggleClass("header-hide");
+  $(".header-details").toggleClass("header-hide");
+})
+
 $(".work li a").mousemove(function(e) {
   $(this).find("img").css("top",e.clientY+50+"px").css("left",e.clientX+350+"px");
 })
@@ -27,3 +35,4 @@ var waypoint = new Waypoint({
   },
   offset: $('header').innerHeight()
 })
+
