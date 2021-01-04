@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header a {
+  display: inline-block;
+}
+
+.header a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #ffffff;
+  width: 100%;
+}
+
+.header-bio,
+.header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-links {
+  position: relative;
+  top: 3px;
+}
+
+.header-bio-paragraph {
+  max-width: 57ch;
+}
+
+@media (max-width: 960px) {
+  .header-birf {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}
