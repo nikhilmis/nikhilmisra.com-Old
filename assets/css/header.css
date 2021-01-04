@@ -36,6 +36,10 @@
   flex-direction: column;
 }
 
+.header-details {
+  margin-left: 100px;
+}
+
 .header-links {
   position: relative;
   top: 3px;
@@ -52,5 +56,13 @@
 
   .header {
     flex-direction: column;
+  }
+
+  .header > * {
+    max-width: 100%;
+  }
+
+  .header-details {
+    margin-left: 0;
   }
 }
