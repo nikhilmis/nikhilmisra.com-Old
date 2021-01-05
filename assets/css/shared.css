@@ -1,0 +1,54 @@
+:root {
+  --underline-width: 80%;
+  --black: #000;
+  --white: #fff;
+  --offwhite: #fefcf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GerstnerProgramm";
+  src: url("./../fonts/GerstnerProgrammRegular.otf"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "GerstnerProgrammItalic";
+  src: url("./../fonts/GerstnerProgrammRegularItalic.otf"); /* IE9 Compat Modes */
+}
+
+body {
+  font-family: "GerstnerProgramm", sans-serif;
+  font-size: 22px;
+}
+
+body a:hover {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.underlined:after {
+  content: "";
+  display: block;
+  height: 1.8px;
+  width: 100%;
+  background: #fff;
+}
+
+.underlined.animated:after {
+  transition: width 0.8s ease, background-color 0.8s ease;
+  background: transparent;
+  width: 0%;
+}
