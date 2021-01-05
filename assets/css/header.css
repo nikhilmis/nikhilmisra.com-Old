@@ -24,6 +24,7 @@
 
 .header-expand-bio {
   display: inline-block;
+  transition: transform 0.2s ease-in-out;
 }
 
 .header-expand-bio:hover {
@@ -46,7 +47,23 @@
 }
 
 .header-hide {
-  display: none;
+  max-height: 0;
+  opacity: 0;
+}
+
+.header-hide.header-expanded-bio {
+  transition: margin .25s ease-in-out;
+  margin: 0;
+}
+
+.header-show, .header-hide {
+  transition: max-height .25s ease-in-out, opacity .25s ease-in-out;
+  overflow: hidden;
+}
+
+.header-show {
+  max-height: 500px;
+  opacity: 1;
 }
 
 @media (max-width: 960px) {

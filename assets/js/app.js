@@ -2,8 +2,11 @@ $(".header-expand-bio").on('click', function() {
   const moreText = "(...More Information)";
   const hideText = "(Hide Information...)";
   $(this).html($(this).html() === moreText ? hideText : moreText);
+  $(".header-expand-bio").toggleClass("rotated");
   $(".header-expanded-bio").toggleClass("header-hide");
+  $(".header-expanded-bio").toggleClass("header-show");
   $(".header-details").toggleClass("header-hide");
+  $(".header-details").toggleClass("header-show");
 })
 
 $(".work li a").mousemove(function(e) {
