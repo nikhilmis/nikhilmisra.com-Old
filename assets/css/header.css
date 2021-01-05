@@ -31,6 +31,14 @@
   font-style: italic;
 }
 
+.header-expanded-bio {
+  text-indent: 5ch;
+}
+
+.header-expanded-bio a {
+  text-indent: 0;
+}
+
 .header-bio,
 .header-info {
   display: flex;
