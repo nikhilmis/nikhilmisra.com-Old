@@ -7,15 +7,13 @@
   max-width: 33%;
 }
 
-.header a {
-  display: inline-block;
-}
-
+.header a,
+.header span,
 .header-expand-bio {
   display: inline-block;
-  transition: transform 0.2s ease-in-out;
 }
 
+.header-hoverable:hover,
 .header-expand-bio:hover {
   font-style: italic;
 }
@@ -49,12 +47,13 @@
 }
 
 .header-hide.header-expanded-bio {
-  transition: margin .25s ease-in-out;
+  transition: margin 0.25s ease-in-out;
   margin: 0;
 }
 
-.header-show, .header-hide {
-  transition: max-height .25s ease-in-out, opacity .25s ease-in-out;
+.header-show,
+.header-hide {
+  transition: max-height 0.25s ease-in-out, opacity 0.25s ease-in-out;
   overflow: hidden;
 }
 
@@ -62,6 +61,8 @@
   max-height: 500px;
   opacity: 1;
 }
+
+/* Mobile-only styles */
 
 @media (max-width: 960px) {
   .header-birf {

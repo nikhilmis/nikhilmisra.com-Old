@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -13,7 +15,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "UA-126800282-1");
+      gtag("config", "UA-126800282-1", { cookie_flags: 'SameSite=None;Secure' });
     </script>
     <title>nikhilmisra.com</title>
     <link href="assets/css/styles.css" media="all" rel="stylesheet" />
@@ -27,10 +29,10 @@
     <header class="header">
       <div class="header-bio">
         <p>
-          My name is <a href="#" class="underlined">Nikhil Misra</a>. I'm a multidisciplinary
+          My name is <span class="underlined header-hoverable">Nikhil Misra</span>. I'm a multidisciplinary
           designer focusing on design systems, identity, editorial, interaction,
           and ideas. I'm always up for a new challenge, however.
-          <span class="header-expand-bio underlined">(...More Information)</span>
+          <span class="header-expand-bio header-hoverable underlined">(...More Information)</span>
         </p>
           <p class="header-expanded-bio header-hide">Currently, I am a Product Designer at <a href="#">Hearst Newspapers</a>. Previously was with the very talented people at <a href="#">Oak Studios</a>. I hold an <a href="#">MPS in Communication Design</a> from Parsons School of Design and a <a href="#">BFA in Graphic Design</a> from SUNY Purchase College. I also participated in the <a href="#">Typography Summer School</a> program in London.</p>
           <p class="header-expanded-bio header-hide">You can usually find me taking photos, digging for music, or learning something new. These days I spend time learning type esign, coding, and making music.</p>
@@ -46,8 +48,8 @@
         <p class="header-birf">(B.1991), raised, and living in New York.</p>
         <p>Catch me elsewhere:</br>
           <span class="header-links">
-          <a href="#" class="underlined">Email</a>, <a href="#" class="underlined">Instagram</a>,
-          <a href="#" class="underlined">Are.na</a>, <a href="#" class="underlined">LinkedIn</a>
+          <a href="#" class="underlined header-hoverable ">Email</a>, <a href="#" class="underlined header-hoverable ">Instagram</a>,
+          <a href="#" class="underlined header-hoverable ">Are.na</a>, <a href="#" class="underlined header-hoverable ">LinkedIn</a>
         </span>
         </p>
       </div>
