@@ -43,7 +43,7 @@ li {
   display: block;
   height: 1.8px;
   width: 100%;
-  background: #fff;
+  background: var(--white);
 }
 
 .underlined.animated:after {

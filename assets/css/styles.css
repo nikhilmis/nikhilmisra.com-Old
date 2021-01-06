@@ -4,10 +4,14 @@
 
 body {
   background: var(--black);
-  color: var(--white);;
+  
   letter-spacing: 1px;
   padding-top: 25px;
   margin: 0 25px;
+}
+
+body, a {
+  color: var(--white);
 }
 
 ::selection {
@@ -23,10 +27,6 @@ body {
   }
 }
 
-a {
-  color: var(--white);
-}
-
 /* Work styles */
 
 .work {
@@ -40,10 +40,6 @@ a {
 .work li a {
   display: inline-block;
   width: 100%;
-}
-
-.work li a:hover {
-  font-style: italic;
 }
 
 .work img {
