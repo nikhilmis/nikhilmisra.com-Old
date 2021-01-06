@@ -1,0 +1,166 @@
+@import './shared.css';
+
+/* General */
+
+html,
+body {
+  letter-spacing: 0.02px;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+a {
+  color: var(--black);
+}
+
+li {
+  margin: 0 0 20px 0;
+}
+
+/* Header */
+
+header {
+  letter-spacing: 0.02px;
+  position: fixed;
+  width: 100%;
+  padding: 25px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+header a {
+  display: inline-block;
+}
+
+/* Hero styles */
+
+.hero_wrapper {
+  height: 80vh;
+}
+
+.hero_container {
+  width: 100%;
+}
+
+.hero_container img {
+  max-height: 250px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: auto;
+  display: table;
+}
+
+/* Footer styles */
+
+.footernav {
+  background: var(--black);
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.workfooter {
+  margin: 50px 0 0 100px;
+}
+
+.workfooter li a {
+  display: inline-block;
+  color: var(--white);
+}
+
+.workfooter li a:hover:after {
+  background: var(--white) !important;
+  width: 100% !important;
+} 
+
+/* Project body styles */
+
+#project {
+  text-align: left;
+  margin: 30px 100px 0px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project_title {
+  width: 230px;
+  padding-bottom: 30px;
+}
+
+.sub {
+  width: 300px;
+}
+.sub,
+.duration {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.project_description {
+  text-align: left;
+  line-height: 1.5;
+  width: 600px;
+}
+
+.project_content {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.project_image {
+  display: block;
+  width: 100%;
+  padding: 0 0 65px 0;
+}
+
+.project_image img {
+  width: 100%;
+  display: table;
+}
+
+.video-style {
+  width: 100%;
+  display: block;
+}
+
+.caption {
+  margin: 35px 115px 0 115px;
+}
+.caption2 {
+  text-align: left;
+  line-height: 1.5;
+  margin: 35px 100px 0px 0px;
+  width: 600px;
+}
+.footer {
+  margin: 0 0 10px 0;
+}
+
+@media only screen and (max-width: 1125px) {
+  .html body {
+    font-size: 1.3em;
+  }
+
+  #project {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .project_title,
+  .project_description,
+  .workfooter,
+  .caption,
+  .caption2 {
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
