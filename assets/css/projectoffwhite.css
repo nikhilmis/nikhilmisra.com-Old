@@ -1,5 +1,4 @@
 /* Header styles */
-
 header {
   color: var(--black);
 }
@@ -10,7 +9,6 @@ header a:hover:after {
 }
 
 /* Hero styles */
-
 .hero_container {
   background: var(--offwhite);
   padding: 150px 0px 100px 0px;
