@@ -4,7 +4,7 @@
 
 body {
   background: var(--black);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   padding-top: 25px;
   margin: 0 25px;
 }
