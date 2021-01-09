@@ -1,14 +1,10 @@
 /* General */
-
 body {
   background-color: white;
 }
 
 /* Header styles */
-
-
 header {
-  /* color: var(--white); */
   mix-blend-mode: exclusion;
   z-index: 100;
 }
@@ -17,29 +13,10 @@ header a {
   color: var(--white);
 }
 
-/* header a:hover:after {
+header a:hover:after {
   background: var(--white) !important;
   width: 100% !important;
 }
-
-header.invert a {
-  color: var(--black);
-  display: inline-block;
-}
-
-header.invert a:after {
-  content: "";
-  display: block;
-  height: 1.8px;
-  width: 0;
-  background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
-}
-
-header.invert a:hover:after {
-  background: var(--black) !important;
-  width: 100% !important;
-} */
 
 /* Hero styles */
 .hero_wrapper,
