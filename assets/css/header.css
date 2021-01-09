@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .header > * {
@@ -34,6 +34,10 @@
 
 .header-details {
   margin-left: 100px;
+}
+
+.header-info {
+  margin-left: auto;
 }
 
 .header-links {
