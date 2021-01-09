@@ -101,13 +101,6 @@
   display: block;
 }
 
-.slick-dots li button:before {
-  font-family: "slick";
-  font-size: 22px;
-  line-height: 20px;
-  letter-spacing: 10px;
-}
-
 /* Slick styles from project */
 .slick-arrow {
   height: 100%;
@@ -178,23 +171,7 @@
 
   cursor: pointer;
 }
-.slick-dots li button {
-  font-size: 20px;
-  line-height: 0;
 
-  display: block;
-
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-
-  cursor: pointer;
-
-  color: transparent;
-  border: 0;
-  outline: none;
-  background: transparent;
-}
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   outline: none;
@@ -206,6 +183,7 @@
 .slick-dots li button:before {
   font-family: "slick";
   line-height: 20px;
+  letter-spacing: 10px;
 
   position: absolute;
   top: 0;
