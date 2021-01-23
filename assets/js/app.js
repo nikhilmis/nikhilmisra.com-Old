@@ -2,7 +2,6 @@ $(".header-expand-bio").on('click', function() {
   const moreText = "(...More Information)";
   const hideText = "(Hide Information...)";
   $(this).html($(this).html() === moreText ? hideText : moreText);
-  $(".header-expand-bio").toggleClass("rotated");
   $(".header-expanded-bio, .header-details").toggleClass("header-hide");
   $(".header-expanded-bio, .header-details").toggleClass("header-show");
 })

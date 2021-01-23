@@ -18,8 +18,13 @@
   font-style: italic;
 }
 
+.header-hoverable:hover:after {
+  background: var(--white) !important;
+  width: 100% !important;
+}
+
 .header-expanded-bio {
-  text-indent: 5ch;
+  text-indent: 2ch;
 }
 
 .header-expanded-bio a {
@@ -57,7 +62,7 @@
 
 .header-show,
 .header-hide {
-  transition: max-height 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transition: max-height 0.25s ease-in-out, opacity 0.5s ease-in-out;
   overflow: hidden;
 }
 

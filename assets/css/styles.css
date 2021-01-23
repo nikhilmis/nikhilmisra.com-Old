@@ -16,12 +16,16 @@ body, a {
 ::selection {
   color: var(--black);
   background-color: var(--white);
+  font-style: italic;
+}
+
+:not(::selection) {
+  filter: blur(10px);
 }
 
 @media (max-width: 960px) {
   body {
     font-size: 20px;
-    line-height: 24px;
     margin: 0 2em;
   }
 }
