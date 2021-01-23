@@ -7,5 +7,5 @@ $(".header-expand-bio").on('click', function() {
 })
 
 $(".work li a").mousemove(function(e) {
-  $(this).find("img").css("top",e.clientY+50+"px").css("left",e.clientX+350+"px");
+  $(this).find("img").css("top",e.clientY+50+"px").css("left",e.clientX+200+"px");
 })

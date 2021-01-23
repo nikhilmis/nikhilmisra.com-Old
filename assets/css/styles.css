@@ -13,14 +13,13 @@ body, a {
   color: var(--white);
 }
 
+:not(::selection) {
+  color: red;
+}
+
 ::selection {
   color: var(--black);
   background-color: var(--white);
-  font-style: italic;
-}
-
-:not(::selection) {
-  filter: blur(10px);
 }
 
 @media (max-width: 960px) {
