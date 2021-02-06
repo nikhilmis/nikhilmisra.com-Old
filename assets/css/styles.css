@@ -5,21 +5,26 @@
 body {
   background: var(--black);
   letter-spacing: 0.5px;
-  padding-top: 25px;
-  margin: 0 25px;
 }
 
 body, a {
   color: var(--white);
 }
 
-:not(::selection) {
-  color: red;
-}
 
-::selection {
+::selection,
+.highlighted {
   color: var(--black);
   background-color: var(--white);
+  border-radius: 2px;
+}
+
+.hideHighlightedElement {
+  opacity: 0;
+}
+
+.notSelectable {
+  user-select: none;
 }
 
 @media (max-width: 960px) {
@@ -29,10 +34,20 @@ body, a {
   }
 }
 
+.blur-wrapper {
+  padding-top: 25px;
+  margin: 0 25px;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
 /* Work styles */
 
 .work {
   margin-top: 100px;
+  user-select: none;
 }
 
 .work li {

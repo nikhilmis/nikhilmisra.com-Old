@@ -53,6 +53,7 @@
 .header-hide {
   max-height: 0;
   opacity: 0;
+  user-select: none;
 }
 
 .header-hide.header-expanded-bio {
@@ -66,7 +67,7 @@
   overflow: hidden;
 }
 
-.header-show {
+.header-show:not(.hideHighlightedElement) {
   max-height: 500px;
   opacity: 1;
 }
