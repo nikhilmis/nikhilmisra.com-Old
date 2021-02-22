@@ -38,6 +38,7 @@ document.addEventListener('selectionchange', function() {
       const range = selection.getRangeAt(0);
       const { commonAncestorContainer } = range;
       const parent = getSelectableParent(commonAncestorContainer);
+      console.log("Getting text before selection")
       const textBeforeSelection = getTextBeforeSelection(parent.firstChild, "", selection);
       const textAfterSelection = getTextAfterSelection(selection.focusNode, "", selection, parent.childNodes);
       
@@ -84,11 +85,11 @@ function getSelectableParent(element) {
 }
 
 function getTextBeforeSelection(element, prevText, selection) {
+  
   const { anchorNode, anchorOffset } = selection;
   const elementText = element.innerText ?? element.wholeText;
-  console.log(element)
   let text = prevText;
-  if (element === anchorNode || element.firstChild === anchorNode) {
+  if (element === anchorNode || element.firstChild === anchorNode || element.lastChild == anchorNode) {
     text += elementText.substring(0, anchorOffset);
     return text;
   } else if (element.nextSibling) {
