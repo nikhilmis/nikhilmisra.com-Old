@@ -11,20 +11,21 @@ $(".work li a").mousemove(function(e) {
 })
 
 document.addEventListener('selectionchange',  function() {
+  $(".blur-wrapper").removeClass("blur");
   $(".hideHighlightedElement").removeClass("hideHighlightedElement");
   $("#highlighted-text").remove();
-  $(".blur-wrapper").removeClass("blur");
 
   let text = "";
   let parentElement;
-  if (window.getSelection) {
+  let selection = window.getSelection();
+  if (selection) {
       text = window.getSelection().toString();
-      parentElement = window.getSelection().anchorNode.parentElement;
+      parentElement = getSelectableParent(window.getSelection().anchorNode);
 
   } else if (document.selection && document.selection.type != "Control") {
+      selection = document.selection
       text = document.selection.createRange().text;
       parentElement = window.getSelection().anchorNode.parentElement;
-      // blurOnHighlight(text);
   }
   
   if (text.length > 0) {
@@ -33,33 +34,71 @@ document.addEventListener('selectionchange',  function() {
 
       // Blur everything
       $(".blur-wrapper").addClass("blur");
-
-      // Copy parent element and add span tags with blur class before and after selection
-      var copyElement = parentElement;
-      console.log(copyElement.innerText);
-      console.log(copyElement.textContent);
-      var splitText = copyElement.innerText.split(text);
+      const range = selection.getRangeAt(0);
+      const { commonAncestorContainer } = range;
+      const parent = getSelectableParent(commonAncestorContainer);
+      const textBeforeSelection = getTextBeforeSelection(parent.firstChild, "", selection);
+      const textAfterSelection = getTextAfterSelection(selection.focusNode, "", selection, parent.childNodes);
       
       // Insert copy of in relative position matching boundingClientRect of original parent
-      var x = parentElement?.getBoundingClientRect().left;
-      var y = parentElement?.getBoundingClientRect().top;
-      var width = parentElement?.getBoundingClientRect().width;
+      const { x, y, width } = parentElement?.getBoundingClientRect();
       var elementWithBlur = `
           <div id="highlighted-text" style="position: absolute; top: ${y}px; left: ${x}px; width: ${width}px;">
-            <span class="blur">${splitText[0]}</span>
-            <span class="highlighted">${text}</span>
-            <span class="blur">${splitText[1]}</span>
+            <span class="blur">${textBeforeSelection}</span><span class="highlighted">${text}</span><span class="blur">${textAfterSelection}</span>
           </div>
         `
       
       $('body').prepend(elementWithBlur);
   }
-})  ;
+});
 
+function getSelectableParent(element) {
+  switch (element.nodeName) {
+    case "BODY":
+    case "HTML":
+      return undefined;
+    case "P":
+    case "H1":
+    case "H2":
+    case "H3":
+    case "H4":
+    case "H5":
+      return element;
+    default:
+      return getSelectableParent(element.parentElement)
+  }
+}
 
-// function blurOnHighlight(text, x, y) {
-//     $('body').prepend(`<div id="highlighted-text" style="position: relative;">
-//     <p style="top: ${x}; left: ${y}; position: absolute">${text}</p>
-//     </div>`);
-//     $(".blur-wrapper").addClass("blur");
-// }
+function getTextBeforeSelection(element, prevText, selection) {
+  const { anchorNode, anchorOffset } = selection;
+  const elementText = element.innerText ?? element.wholeText;
+  let text = prevText;
+  if (element === anchorNode || element.firstChild === anchorNode) {
+    text += elementText.substring(0, anchorOffset);
+    return text;
+  } else {
+    text += elementText;
+    return getTextBeforeSelection(element.nextSibling, text, selection)
+  }
+}
+
+function getTextAfterSelection(element, prevText, selection, childNodes) {
+  const elementIsInArray = Array.from(childNodes).indexOf(element) > -1;
+  let text = prevText;
+  const { focusNode, focusOffset } = selection;
+  const elementText = element.innerText ?? element.wholeText;
+  
+  if (element === focusNode || element.firstChild === focusNode) {
+    text += elementText.substring(focusOffset);
+  } else {
+    text += elementText;
+  }
+
+  if (element.nextSibling && elementIsInArray) {
+    return getTextAfterSelection(element.nextSibling, text, selection, childNodes);
+  } else if (element.parentElement.nextSibling && elementIsInArray) {
+    return getTextAfterSelection(element.parentElement.nextSibling, text, selection, childNodes) 
+  } else {
+    return text;
+  }
+}

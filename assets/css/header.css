@@ -61,8 +61,8 @@
   margin: 0;
 }
 
-.header-show,
-.header-hide {
+.header-show.header-show:not(.hideHighlightedElement),
+.header-hide:not(.hideHighlightedElement) {
   transition: max-height 0.25s ease-in-out, opacity 0.5s ease-in-out;
   overflow: hidden;
 }

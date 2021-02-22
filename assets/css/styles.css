@@ -40,7 +40,12 @@ body, a {
 }
 
 .blur {
-  filter: blur(4px);
+  filter: blur(3px);
+}
+
+/*TODO: delete after testing*/
+.red {
+  color: red;
 }
 
 /* Work styles */
