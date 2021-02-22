@@ -10,7 +10,7 @@ $(".work li a").mousemove(function(e) {
     $(this).find("img").css("top",e.clientY+50+"px").css("left",e.clientX+200+"px");
 })
 
-document.addEventListener('selectionchange',  function() {
+document.addEventListener('selectionchange', function() {
   $(".blur-wrapper").removeClass("blur");
   $(".hideHighlightedElement").removeClass("hideHighlightedElement");
   $("#highlighted-text").remove();
@@ -86,6 +86,7 @@ function getSelectableParent(element) {
 function getTextBeforeSelection(element, prevText, selection) {
   const { anchorNode, anchorOffset } = selection;
   const elementText = element.innerText ?? element.wholeText;
+  console.log(element)
   let text = prevText;
   if (element === anchorNode || element.firstChild === anchorNode) {
     text += elementText.substring(0, anchorOffset);
@@ -93,6 +94,8 @@ function getTextBeforeSelection(element, prevText, selection) {
   } else if (element.nextSibling) {
     text += elementText;
     return getTextBeforeSelection(element.nextSibling, text, selection)
+  } else {
+    return prevText;
   }
 }
 
