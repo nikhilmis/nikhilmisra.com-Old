@@ -19,6 +19,10 @@ body, a {
   border-radius: 2px;
 }
 
+.highlighted-paragraph {
+  display: inline-block;
+}
+
 .hideHighlightedElement {
   opacity: 0;
 }
