@@ -30,15 +30,16 @@ document.addEventListener('selectionchange', function() {
   // }
   
   if (text.length > 0) {
-      // Hide original parent element
-      $(parentElement).addClass("hideHighlightedElement");
-
-      // Blur everything
-      $(".blur-wrapper").addClass("blur");
-      const range = selection.getRangeAt(0);
-      const { commonAncestorContainer } = range;
-      const parent = getSelectableParent(commonAncestorContainer);
-      console.log("Getting text before selection")
+    
+    // Blur everything
+    $(".blur-wrapper").addClass("blur");
+    
+    const range = selection.getRangeAt(0);
+    const { commonAncestorContainer } = range;
+    const parent = getSelectableParent(commonAncestorContainer);
+    
+    // Hide original parent elements
+      $(parent).addClass('hideHighlightedElement');
       const textBeforeSelection = getTextBeforeSelection(parent.firstChild, "", selection);
       const textAfterSelection = getTextAfterSelection(selection.focusNode, "", selection, parent.childNodes);
       
