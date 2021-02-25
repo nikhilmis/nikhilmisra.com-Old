@@ -7,7 +7,6 @@
   max-width: 33%;
 }
 
-.header a,
 .header span,
 .header-expand-bio {
   display: inline-block;
@@ -31,11 +30,11 @@
   text-indent: 0;
 }
 
-.header-bio,
+/* .header-bio,
 .header-info {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .header-details {
   margin-left: 100px;

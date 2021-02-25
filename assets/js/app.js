@@ -40,30 +40,11 @@ document.addEventListener('selectionchange', function() {
     const nodeIterator = document.createNodeIterator(parentElement);
 
     var nodes = new Set();
-    // Iterate through nodes in range, remove any containing newline
-    // TODO REFACTOR THIS!!
-    // while (nodeIterator.nextNode()) {
-    //   const { referenceNode } = nodeIterator;
-    //   if (nodes.length === 0 && referenceNode !== startContainer) continue;
-    //   if (!referenceNode.textContent.includes('\n')) {
-    //     if (referenceNode.nodeName === 'P') {
-    //       nodes.push(referenceNode)
-    //     } else if (referenceNode.nodeName === 'A') {
-    //       nodes.push(referenceNode.parentElement);
-    //     } else if (referenceNode.nodeName === '#text') {
-    //       if (referenceNode.parentElement.nodeName === 'P') {
-    //         nodes.push(referenceNode.parentElement)
-    //       } else {
-    //         nodes.push(referenceNode.parentElement.parentElement)
-    //       }
-    //     }
-    //   }
-    //   if (referenceNode === endContainer) break;
-    // }
+
+    // Add all parent elements to array
 
     while (nodeIterator.nextNode()) {
       const { referenceNode: node } = nodeIterator;
-      console.log("node:", node)
       if (nodes.length === 0 && node !== startContainer) continue;
       if (!(node.nodeName === "#text" && node.textContent.includes('\n')) && node.nodeName !== "DIV") {
         nodes.add(getSelectableParent(node));
@@ -72,29 +53,65 @@ document.addEventListener('selectionchange', function() {
       if (node === endContainer) break;
     }
 
-    console.log(nodes)
+    const nodeArray = Array.from(nodes);
 
-    // // Copy nodes
-    // let copyNodes = [];
-    // // Hide originals
-    // nodes.forEach((node) => {
-    //   const copyNode = node.cloneNode(true);
-    //   const copyNodeIsInArray = copyNodes.some(copyInArray => {
-    //     copyInArray.innerText.localeCompare(copyNode.innerText)
-    //   });
-    //   if (!copyNodeIsInArray) {
-    //     copyNodes.push(node.cloneNode(true));
-    //   }
-    //   $(node).addClass('hideHighlightedElement');
-    // });
-
-    //console.log(copyNodes)
+    // Make a copy of and hide originals
+    const cloneNodes = nodeArray.map((node) => node.cloneNode(true));
+    nodes.forEach(node => $(node).addClass('hideHighlightedElement'));
 
     // TODO surroundContents of range with: </span> at the beginning, <span class="blur-span> at the end. 
     // Then insert the rest of the tags at the beginning and end of parent container
     // OR: in parent container innerHTML, string replace. But then, problem with non-unique strings (e.g. which "i" in Nikhil Misra) 
     // OR: count length of parent string until beginning of range somehow, then insert tags at start and that index
     // https://stackoverflow.com/questions/4811822/get-a-ranges-start-and-end-offsets-relative-to-its-parent-container
+
+    //console.log(startContainer, endContainer)
+
+    // let cloneTextNodes = [];
+    // cloneNodes.forEach(node => {
+    //   const textNodes = getTextNodes(node);
+    //   cloneTextNodes.push(...textNodes);
+    // })
+    // console.log(cloneTextNodes[0])
+    // cloneTextNodes[0].nodeValue = `<span class="blur">${cloneTextNodes[0].nodeValue}</span>`;
+
+    console.log(startContainer)
+    let textLength = 0;
+    cloneNodes.forEach((node, index) => {
+      node.innerHTML = node.innerHTML.replace(/\r?\n|\r/g, '');
+      node.innerHTML = '<span class="blur">' + node.innerHTML + '</span>';
+
+
+
+      const childTextNodes = getTextNodes(node);
+      childTextNodes.forEach(textNode => {
+        if (textNode.data !== startContainer.data) 
+          console.log(textNode, startOffset)
+          //node.innerHTML = node.innerHTML.substring(0, startOffset) + '</span><span class="highlighted">' + node.innerHTML.substring(startOffset, textNode.length -1) + '</span>';
+      })
+    })
+
+    // for each node,
+    // if child nodes does not contain start or end container, 
+    // add blur to classList
+    // else if it contains start container, but not end container,
+    // --> Edge case: start container is firstChild and startOffset is 0, in this case, no blur tag needed at the start or at actual startOffset
+    // add blur span to start, then get actual startOffset, and add blur end tag and highlight start tag, then add highlight end tag at end
+    // else if it contains end container, but not start container, get actual endOffset, add highlight start tag to start, and add highlight end tag and blur start tag at offset, and blur end tag at end
+    // else if it contains both, add blur tag at start, get actual startOffset, add blur end and highlight start there, then get actual endOffset, add highlight end and blur start there, and blur end tag at end
+    // --> Edge case: start container is firstChild and startOffset is 0, in this case, no blur tag needed at the start or at actual startOffset
+    // --> Edge case: end container is lastChild and endOffset is === endContainer.length, in this case no blur tag needed at actual endOffset and at end
+
+
+    // for each clone node, get child text nodes
+    // for each text node in array
+    // if clone node is first in array, add blur span at the beginning
+    // add node's text length to a selectionStartIndex variable
+    // if node is not startContainer, keep going
+    // else insert blur span end tag and highlighted text span at the startOffset's index
+    // then if startContainer and endContainer is the same, add highlighted text end tag at the endOffset's index
+    // else if node is not endContainer, keepgoing,
+    // then at end add blur end tag
 
     // Insert blur span tags before and after selection
     // const firstElement = copyNodes[0];
@@ -104,21 +121,20 @@ document.addEventListener('selectionchange', function() {
     // firstElement.innerHTML = firstElementText.join('');
 
     // Insert copy of in relative position matching boundingClientRect of original parent
-    // const { x, y, width } = parentElement?.getBoundingClientRect();
+    const outermostElement = nodeArray.length === 1 ? nodeArray[0] : nodeArray[0].parentElement;
+    const { x, y, width } = outermostElement.getBoundingClientRect();
+    const elementWithBlur = document.createElement('div');
+    $(elementWithBlur).attr('id', 'highlighted-text').css({'position': 'absolute', 'top': `${y}px`, 'left': `${x}px`, 'width': `${width}px`})
 
-    // const elementWithBlur = document.createElement('div');
-    // $(elementWithBlur).attr('id', 'highlighted-text').css({'position': 'absolute', 'top': `${y}px`, 'left': `${x}px`, 'width': `${width}px`})
+    cloneNodes.forEach((node) => {
+      const p = document.createElement('p');
+      p.innerHTML = node.innerHTML;
+      p.classList = node.classList;
+      $(p).addClass('cloneParagraph');
+      $(elementWithBlur).append(p)
+    })
 
-    // copyNodes.forEach((node) => {
-    //   const p = document.createElement('p');
-    //   p.innerText = node.innerText;
-    //   p.classList = node.classList;
-    //   $(p).addClass('cloneParagraph');
-    //   $(elementWithBlur).append(p)
-    // })
-
-
-    //$('body').prepend(elementWithBlur);
+    $('body').prepend(elementWithBlur);
 
     // const parent = getSelectableParent(commonAncestorContainer);
     
@@ -168,6 +184,20 @@ function getSelectableParent(element) {
     default:
       return getSelectableParent(element.parentElement)
   }
+}
+
+function getTextNodes(node) {
+  const textFinder = document.createNodeIterator(node, NodeFilter.SHOW_TEXT);
+  
+  // Show the content of every non-empty text node that is a child of root
+  let textNodes = [];
+  let currentTextNode;
+  
+  while ((currentTextNode = textFinder.nextNode())) {
+    
+    textNodes.push(currentTextNode)
+  }
+  return textNodes;
 }
 
 function getTextBeforeSelection(element, prevText, selection) {

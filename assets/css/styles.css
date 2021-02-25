@@ -12,6 +12,10 @@ body, a {
   color: var(--white);
 }
 
+p a,
+p span.underlined {
+  display: inline-block;
+}
 
 ::selection,
 .highlighted {
@@ -20,12 +24,21 @@ body, a {
   border-radius: 2px;
 }
 
-.highlighted-paragraph {
-  display: inline-block;
+span.highlighted,
+span.blur {
+  display: inline !important;
 }
 
 .cloneParagraph {
+  margin: 22px 0 22px 0;
+}
+
+.cloneParagraph:only-child {
   margin: 0;
+}
+
+.highlighted-paragraph {
+  display: inline-block;
 }
 
 .hideHighlightedElement {
@@ -46,6 +59,12 @@ body, a {
 .blur-wrapper {
   padding-top: 25px;
   margin: 0 25px;
+}
+
+@media (max-width: 960px) {
+  .blur-wrapper {
+    margin: 0px;
+  }
 }
 
 .blur,
