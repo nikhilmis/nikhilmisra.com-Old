@@ -5,6 +5,7 @@
 body {
   background: var(--black);
   letter-spacing: 0.5px;
+  overflow: hidden;
 }
 
 body, a {
@@ -21,6 +22,10 @@ body, a {
 
 .highlighted-paragraph {
   display: inline-block;
+}
+
+.cloneParagraph {
+  margin: 0;
 }
 
 .hideHighlightedElement {
@@ -43,7 +48,8 @@ body, a {
   margin: 0 25px;
 }
 
-.blur {
+.blur,
+.blur-span {
   filter: blur(3px);
 }
 
