@@ -75,20 +75,21 @@ document.addEventListener('selectionchange', function() {
     // console.log(cloneTextNodes[0])
     // cloneTextNodes[0].nodeValue = `<span class="blur">${cloneTextNodes[0].nodeValue}</span>`;
 
-    console.log(startContainer)
-    let textLength = 0;
-    cloneNodes.forEach((node, index) => {
-      node.innerHTML = node.innerHTML.replace(/\r?\n|\r/g, '');
-      node.innerHTML = '<span class="blur">' + node.innerHTML + '</span>';
+    // console.log(startContainer)
+    // let textLength = 0;
+    // cloneNodes.forEach((node, index) => {
+    //   node.innerHTML = node.innerHTML.replace(/\r?\n|\r/g, '');
+    //   node.innerHTML = '<span class="blur">' + node.innerHTML + '</span>';
+    //   const childTextNodes = getTextNodes(node);
+    //   childTextNodes.forEach(textNode => {
+    //     if (textNode.data !== startContainer.data) 
+    //       console.log(textNode, startOffset)
+    //       //node.innerHTML = node.innerHTML.substring(0, startOffset) + '</span><span class="highlighted">' + node.innerHTML.substring(startOffset, textNode.length -1) + '</span>';
+    //   })
+    // })
 
-
-
-      const childTextNodes = getTextNodes(node);
-      childTextNodes.forEach(textNode => {
-        if (textNode.data !== startContainer.data) 
-          console.log(textNode, startOffset)
-          //node.innerHTML = node.innerHTML.substring(0, startOffset) + '</span><span class="highlighted">' + node.innerHTML.substring(startOffset, textNode.length -1) + '</span>';
-      })
+    cloneNodes.forEach((node) => {
+      //$(node).find('span').remove();
     })
 
     // for each node,
@@ -128,7 +129,7 @@ document.addEventListener('selectionchange', function() {
 
     cloneNodes.forEach((node) => {
       const p = document.createElement('p');
-      p.innerHTML = node.innerHTML;
+      p.innerText = node.innerText;
       p.classList = node.classList;
       $(p).addClass('cloneParagraph');
       $(elementWithBlur).append(p)

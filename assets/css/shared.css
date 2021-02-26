@@ -39,9 +39,18 @@ li {
   padding: 0;
 }
 
+.underlined {
+  position: relative;
+}
+
 .underlined:after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: -2px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
   height: 1.8px;
   width: 100%;
   background: var(--white);
