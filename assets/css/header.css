@@ -47,6 +47,11 @@
 .header-links {
   position: relative;
   top: 3px;
+  margin: 0;
+}
+
+.header-links-heading {
+  margin-bottom: 0;
 }
 
 .header-hide {

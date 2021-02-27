@@ -47,9 +47,9 @@ document.addEventListener('selectionchange', function () {
                 if (!(node.nodeName === "#text" && node.textContent.includes('\n')) && node.nodeName !== "DIV") {
                     nodes.add(getSelectableParent(node));
                 }
-
                 if (node === endContainer) break;
             }
+
 
             const nodeArray = Array.from(nodes);
 
@@ -74,9 +74,9 @@ document.addEventListener('selectionchange', function () {
                 const p = document.createElement('p');
                 p.classList = node.classList;
                 p.classList.add('cloneParagraph');
-
+                
                 if (!containsStartContainer && !containsEndContainer) {
-                    p.innerHTML = `<span class="highlighted">${node.innerText}</span>`;
+                    p.innerHTML = `<span class="${$(elementWithBlur).has('.highlighted').length > 0 ? "highlighted" : "blur"}">${node.innerText}</span>`;
                 } else if (containsStartContainer && !containsEndContainer) {
                     const highlightFromStart = startOffset === 0;
                     p.innerHTML = `${highlightFromStart ? '' : '<span class="blur">'}${node.innerText.substring(0, actualStartOffset)}${highlightFromStart ? '' : '</span>'}<span class="highlighted">${node.innerText.substring(actualStartOffset)}</span>`;
