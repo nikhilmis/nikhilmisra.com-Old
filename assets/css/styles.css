@@ -42,7 +42,13 @@ span.blur {
 }
 
 .hideHighlightedElement {
-  opacity: 0;
+  opacity: 0 !important;
+}
+
+.cloneParagraph,
+.hideHighlightedElement {
+  pointer-events: none;
+  cursor: default;
 }
 
 .notSelectable {

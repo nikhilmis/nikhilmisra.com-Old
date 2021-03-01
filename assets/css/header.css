@@ -7,6 +7,10 @@
   max-width: 33%;
 }
 
+.header-expand-bio {
+  cursor: pointer;
+}
+
 .header span,
 .header-expand-bio {
   display: inline-block;
@@ -29,12 +33,6 @@
 .header-expanded-bio a {
   text-indent: 0;
 }
-
-/* .header-bio,
-.header-info {
-  display: flex;
-  flex-direction: column;
-} */
 
 .header-details {
   margin-left: 100px;
@@ -67,7 +65,7 @@
 
 .header-show.header-show:not(.hideHighlightedElement),
 .header-hide:not(.hideHighlightedElement) {
-  transition: max-height 0.25s ease-in-out, opacity 0.5s ease-in-out;
+  transition: max-height 0.25s ease-in-out;
   overflow: hidden;
 }
 
@@ -75,7 +73,6 @@
   max-height: 500px;
   opacity: 1;
 }
-
 /* Mobile-only styles */
 
 @media (max-width: 960px) {

@@ -1,9 +1,19 @@
 $(".header-expand-bio").on('click', function () {
     const moreText = "(...More Information)";
     const hideText = "(Hide Information...)";
+    const show = $(this).html() === moreText;
     $(this).html($(this).html() === moreText ? hideText : moreText);
+    
+    $(".header-expanded-bio, .header-details").animate({
+        marginTop: show ? 22 : 0,
+        marginBottom: show ? 22 : 0,
+        opacity: show ? 1 : 0,
+        maxHeight: show ? 500 : 0,
+        
+    },
+    250
+    )
     $(".header-expanded-bio, .header-details").toggleClass("header-hide");
-    $(".header-expanded-bio, .header-details").toggleClass("header-show");
 })
 
 $(".work li a").mousemove(function (e) {
@@ -25,10 +35,6 @@ document.addEventListener('selectionchange', function () {
      }
 
     if (text.length > 0) {
-
-        // Blur everything
-        $(".blur-wrapper").addClass("blur");
-
         const range = selection.getRangeAt(0);
         const { commonAncestorContainer, startContainer, startOffset, endContainer, endOffset } = range;
         const { nodeName } = commonAncestorContainer
@@ -49,7 +55,6 @@ document.addEventListener('selectionchange', function () {
                 }
                 if (node === endContainer) break;
             }
-
 
             const nodeArray = Array.from(nodes);
 
@@ -92,6 +97,11 @@ document.addEventListener('selectionchange', function () {
                 $(elementWithBlur).append(p)
 
             });
+
+            if (elementWithBlur) {
+                // Blur everything
+                $(".blur-wrapper").addClass("blur");
+            }
 
             $('body').prepend(elementWithBlur);
         }
