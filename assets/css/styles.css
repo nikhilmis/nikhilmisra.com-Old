@@ -78,11 +78,6 @@ span.blur {
   filter: blur(3px);
 }
 
-/*TODO: delete after testing*/
-.red {
-  color: red;
-}
-
 /* Work styles */
 
 .work {

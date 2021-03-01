@@ -50,9 +50,11 @@ document.addEventListener('selectionchange', function () {
             while (nodeIterator.nextNode()) {
                 const { referenceNode: node } = nodeIterator;
                 if (nodes.length === 0 && node !== startContainer) continue;
-                if (!(node.nodeName === "#text" && node.textContent.includes('\n')) && node.nodeName !== "DIV") {
-                    nodes.add(getSelectableParent(node));
-                }
+                if (!(node.nodeName === "#text" && node.textContent.includes('\n'))) {
+                    if (node.nodeName !== "DIV") {
+                        nodes.add(getSelectableParent(node));
+                    } 
+                } 
                 if (node === endContainer) break;
             }
 
@@ -63,13 +65,19 @@ document.addEventListener('selectionchange', function () {
             nodes.forEach(node => $(node).addClass('hideHighlightedElement'));
 
             // Insert copy of in relative position matching boundingClientRect of original parent
-            const outermostElement = nodeArray.length === 1 ? nodeArray[0] : nodeArray[0].parentElement;
+            let outermostElement;
+            if (nodeArray.length === 0) {
+                outermostElement = document.querySelector('body');
+            } else if (nodeArray.length === 1) {
+                outermostElement = nodeArray[0];
+            } else if (nodeArray.length > 1) {
+                outermostElement = nodeArray[0].parentElement;
+            }
             const { x, y, width } = outermostElement.getBoundingClientRect();
             const elementWithBlur = document.createElement('div');
             $(elementWithBlur).attr('id', 'highlighted-text').css({ 'position': 'absolute', 'top': `${y}px`, 'left': `${x}px`, 'width': `${width}px` })
 
             cloneNodes.forEach((node) => {
-                //const childNodes = Array.from(node.childNodes);
                 const childNodes = getTextNodes(node);
                 const containsStartContainer = childNodes.find(childNode => childNode.data === startContainer.data);
                 const containsEndContainer = childNodes.find(childNode => childNode.data === endContainer.data);
@@ -98,7 +106,7 @@ document.addEventListener('selectionchange', function () {
 
             });
 
-            if (elementWithBlur) {
+            if ($(elementWithBlur).children().length > 0) {
                 // Blur everything
                 $(".blur-wrapper").addClass("blur");
             }
