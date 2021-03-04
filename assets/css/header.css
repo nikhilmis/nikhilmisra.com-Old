@@ -5,6 +5,11 @@
 
 .header > * {
   max-width: 33%;
+  
+}
+
+.header .header-details {
+  margin-left: 100px;
 }
 
 .header-expand-bio {
@@ -32,10 +37,6 @@
 
 .header-expanded-bio a {
   text-indent: 0;
-}
-
-.header-details {
-  margin-left: 100px;
 }
 
 .header-info {

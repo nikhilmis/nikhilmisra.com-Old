@@ -39,6 +39,11 @@ li {
   padding: 0;
 }
 
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
 .underlined {
   position: relative;
 }
