@@ -59,9 +59,7 @@ document.addEventListener('selectionchange', function () {
             const cloneNodes = nodeArray.map((node) => node.cloneNode(true));
             cloneNodes.forEach(node => $(cloneParent).append(node));
 
-            // Hide original nodes
-            nodeArray.forEach(node => $(node).addClass('hideHighlightedElement'));
-            parentElement.classList.add('hideHighlightedElement');
+            
 
             // Get all text nodes
             const textNodes = getTextNodes(cloneParent);
@@ -76,7 +74,7 @@ document.addEventListener('selectionchange', function () {
                     cloneRange.setStart(node, startOffset);
                 }
                 if (node.data === endContainer.data) {
-                    cloneRange.setEnd(node, endOffset)
+                    cloneRange.setEnd(node, endOffset);
                 }
                 if (node === endContainer) break;
             }
@@ -108,6 +106,9 @@ document.addEventListener('selectionchange', function () {
             if ($(cloneParent).children().length > 0) {
                 $(".blur-wrapper").addClass("blur");
                 $('body').prepend(cloneParent);
+                // Hide original nodes
+                nodeArray.forEach(node => $(node).addClass('hideHighlightedElement'));
+                parentElement.classList.add('hideHighlightedElement');
             }
         }
     }
