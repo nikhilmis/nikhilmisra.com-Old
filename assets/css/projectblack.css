@@ -1,8 +1,3 @@
-/* General */
-body {
-  background-color: white;
-}
-
 /* Header styles */
 header {
   mix-blend-mode: exclusion;
@@ -16,6 +11,13 @@ header a {
 header a:hover:after {
   background: var(--white) !important;
   width: 100% !important;
+}
+
+/* Background color is set in a wrapper to make sure it's a sibling to header, so that they can blend */
+.backgroundWrapper {
+  background-color: var(--offwhite);
+  width: 100%;
+  height: 100%;
 }
 
 /* Hero styles */

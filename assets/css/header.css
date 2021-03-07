@@ -5,7 +5,10 @@
 
 .header > * {
   max-width: 33%;
-  
+}
+
+.header p:first-child {
+  margin-top: 0;
 }
 
 .header .header-details {
@@ -42,6 +45,21 @@
 .header-info {
   margin-left: auto;
   text-align: end;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 960px) {
+  .header-info {
+    text-align: start;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 961px) {
+  .header-links-wrapper {
+    margin-left: auto;    
+  }
 }
 
 .header-links {
@@ -50,8 +68,10 @@
   margin: 0;
 }
 
+
 .header-links-heading {
   margin-bottom: 0;
+  text-align: start;
 }
 
 .header-hide {

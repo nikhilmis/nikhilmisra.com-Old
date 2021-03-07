@@ -1,4 +1,9 @@
 /* Header styles */
+
+body {
+  background-color: var(--offwhite);
+}
+
 header {
   color: var(--black);
 }
@@ -15,9 +20,8 @@ header a:hover:after {
 }
 
 .hero_container img {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 25px;
   padding-right: 25px;
 }

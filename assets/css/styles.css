@@ -5,9 +5,15 @@
 body {
   background: var(--black);
   letter-spacing: 0.5px;
-  overflow: hidden;
   padding-top: 25px;
   margin: 0 25px;
+}
+
+@media (max-width: 960px) {
+  body {
+    font-size: 20px;
+    margin: 0 1.5em;
+  }
 }
 
 body, a {
@@ -22,7 +28,6 @@ p span.underlined {
 ::selection {
   color: var(--black);
   background-color: var(--white);
-  border-radius: 2px;
   text-shadow: unset;
 }
 
@@ -30,12 +35,6 @@ p span.underlined {
   text-shadow: var(--blur-text-shadow) rgba(255, 255, 255, var(--blur-text-opacity));
 }
 
-@media (max-width: 960px) {
-  body {
-    font-size: 20px;
-    margin: 0 2em;
-  }
-}
 /* Work styles */
 
 .work {
@@ -69,8 +68,13 @@ p span.underlined {
 
 .work-items {
   display: grid;
-  white-space: nowrap;
   grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); 
+}
+
+@media (min-width: 961px) {
+  .work-items {
+    white-space: nowrap;
+  }
 }
 
 .work-items:hover .text-node:after {
