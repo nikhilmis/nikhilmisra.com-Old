@@ -1,109 +1,172 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-126800282-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "UA-126800282-1");
-    </script>
-    <title>Just Another Space</title>
-    <link href="assets/css/styles.css" media="all" rel="stylesheet" />
-    <link rel="icon" href="assets/img/favicon.png" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126800282-1"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <body>
-    <header>
-      <div class="myname">
-        Nikhil Misra is a <br class="mobile" />designer<br class="thoughtful" />
-        who makes <br class="mobile" />
-        thoughtful things
+    gtag("config", "UA-126800282-1", { cookie_flags: 'SameSite=None;Secure' });
+  </script>
+  <title>nikhilmisra.com</title>
+  <link href="assets/css/styles.css" media="all" rel="stylesheet" />
+  <link href="assets/css/header.css" media="all" rel="stylesheet" />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <div class="blur-wrapper">
+  <header>
+    <div class="header">
+      <div class="header-bio">
+        <p>My name is <a class="header-hoverable underlined animated">Nikhil Misra</a>. I'm a designer and artist focusing on design systems, identities, editorial, interaction, and interesting ideas.</p>
+          <p class="header-expanded-bio header-hide">Currently, I am a Product Designer at <a class="underlined" href="https://www.hearst.com/newspapers">Hearst Newspapers</a>. Previously was with the very talented people at <a class="underlined" href="https://oak.is/">Oak Studios</a>. I hold an MPS in Communication Design from Parsons School of Design and a BFA in Graphic Design from SUNY Purchase College. I also participated in the <a class="underlined" href="http://www.typographysummerschool.org/">Typography Summer School</a> program in London.</p>
+          <p class="header-expanded-bio header-hide">You can usually find me taking photos, <a class="underlined" href="https://www.are.na/nikhil-misra/tracks-for-life">music</a>, or learning something new. These days I spend time learning generative image making, type design, and making music.</p>
+          <p class="header-expanded-bio header-hide">I also spend time thinking about alternative education models and how to make creative careers more accessible to BIPOC youth. If you are interested in talking about that, please reach out.</p>
+          <div class="header-hoverable">
+            <p class="header-expand-bio underlined">(...More Information)</p>
+          </div>
       </div>
-      <div><a href="work/info.html">Info</a></div>
-    </header>
-    <ul class="work">
-      <li>
-        <a href="work/houstonchronicle.html"
-          ><ul class="work-items">
-              <li><span class="text-node">Houston Chronicle</span></li>
-              <li class="work-items-tags"><span class="text-node">Design System, Reader Experience</span></li>
-              <li class="work-item-year"><span class="text-node">2019-present</span><span class="work-item-end"></span></li>
-          </ul>
-          <img src="assets/img/hc/Homepage2020.png"
-        /></a>
-      </li>
-      <li>
-        <a href="work/unfold.html"
-          ><ul class="work-items">
-            <li><span class="text-node">Unfold</span></li>
-            <li class="work-items-tags"><span class="text-node">Identity, Design System</span></li>
-            <li class="work-item-year"><span class="text-node">2017</span><span class="work-item-end"></span></li>
-          </ul>
-          <img src="assets/img/unfold/unfoldhome.svg"
-        /></a>
-      </li>
-      <li>
-        <a href="work/inydsr.html"
-          ><ul class="work-items">
-            <li><span class="text-node">Is The New York Dream Still Alive?</span></li>
-            <li class="work-items-tags"><span class="text-node">Data Visualization, Installation, AR</span></li>
-            <li class="work-item-year"><span class="text-node">2017</span><span class="work-item-end"></span></li>
-          </ul>
-          <img src="assets/img/itnydsr/showcase.jpg"
-        /></a>
-      </li>
-      <li>
-        <a href="work/victoriansecret.html"
-          ><ul class="work-items">
-            <li><span class="text-node">Victorian Secret</span></li>
-            <li class="work-items-tags"><span class="text-node">Album Art, Art Direction</span></li>
-            <li class="work-item-year"><span class="text-node">2017</span><span class="work-item-end"></span></li>
-          </ul>
-          <img src="assets/img/victoriansecret/victoriansecret_webfinal.JPG"
-        /></a>
-      </li>
-      <li>
-        <a href="work/victoriansecret.html"
-          ><ul class="work-items">
-            <li><span class="text-node">Ray Modern</span></li>
-            <li class="work-items-tags"><span class="text-node">Type Design</span></li>
-            <li class="work-item-year"><span class="text-node">2019-present</span><span class="work-item-end"></span></li>
-          </ul>
-          <img src="assets/img/itnydsr/showcase.jpg"
-        /></a>
-      </li>
-      <li>
-        <a href="work/goods.html"
-          ><ul class="work-items">
-            <li><span class="text-node">Goods</span></li>
-            <li class="work-items-tags"><span class="text-node">Identity, Production Design</span></li>
-            <li class="work-item-year"><span class="text-node">2018</span><span class="work-item-end"></span></li>
-          </ul>
-          <img src="assets/img/goods/goodsmockup.png"
-        /></a>
-      </li>
-      <li>
-        <a href="work/posters.html"
-          ><ul class="work-items">
-            <li><span class="text-node">Misc.</span></li>
-            <li class="work-items-tags"><span class="text-node">Posters</span></li>
-            <li class="work-item-year"><span class="text-node">2018</span><span class="work-item-end"></span></li>
-          </ul>
-          <img src="assets/img/posters/lordraja_forwebsite.png"
-        /></a>
-      </li>
-    </ul>
+    
+      <div class="header-details header-hide">
+        <p>
+          Typeset in Gerstner Programm by <a class="underlined" href="https://forgotten-shapes.com/">Forgotten Shapes</a>.
+        </p>
+        <p>
+          Designed and developed by me along with <a class="underlined" href="https://github.com/OleSkaar">Ole Skaar</a>.
+        </p>
+        <p>
+          Last Updated: January 12th, 2021
+        </p>
+      </div>
+      <div class="header-info">
+        <p class="header-birf">(B.1991), raised, and living in New York.</p>
+        <p class="header-links-heading">Catch me elsewhere:</p>
+        <p class="header-links">
+          <a href="#" class="underlined header-hoverable ">Email</a>,
+          <a href="#" class="underlined header-hoverable ">Instagram</a>,
+          <a href="#" class="underlined header-hoverable ">Are.na</a>,
+          <a href="#" class="underlined header-hoverable ">LinkedIn</a>
+        </p>
+      </div>
+  </div>
+  
+  </header>
 
-    <script src="assets/js/app.js"></script>
-  </body>
+  <ul class="work">
+    <li>
+      <a href="work/houstonchronicle.html">
+        <ul class="work-items">
+          <li><span class="text-node underlined animated">Houston Chronicle</span></li>
+          <li class="work-items-tags">
+            <span class="text-node underlined animated">Design System, Reader Experience</span>
+          </li>
+          <li class="work-item-year">
+            <span class="text-node underlined animated">2019 - Present</span><span class="work-item-end"></span>
+          </li>
+        </ul>
+        <img src="assets/img/hc/Homepage2020.png" />
+      </a>
+    </li>
+    <li>
+      <a href="work/houstonchronicle.html">
+        <ul class="work-items">
+          <li><span class="text-node underlined animated">Chron.</span></li>
+          <li class="work-items-tags">
+            <span class="text-node underlined animated">Identity, Design System</span>
+          </li>
+          <li class="work-item-year">
+            <span class="text-node underlined animated">2020</span><span class="work-item-end"></span>
+          </li>
+        </ul>
+        <img src="assets/img/hc/Homepage2020.png" />
+      </a>
+    </li>
+    <li>
+      <a href="work/victoriansecret.html">
+        <ul class="work-items">
+          <li><span class="text-node underlined animated">Victorian Secret</span></li>
+          <li class="work-items-tags">
+            <span class="text-node underlined animated">Album Art, Art Direction</span>
+          </li>
+          <li class="work-item-year">
+            <span class="text-node underlined animated">2019</span><span class="work-item-end"></span>
+          </li>
+        </ul>
+        <img src="assets/img/victoriansecret/victoriansecret_webfinal.JPG" />
+      </a>
+    </li>
+    <li>
+      <a href="work/goods.html">
+        <ul class="work-items">
+          <li><span class="text-node underlined animated">Goods</span></li>
+          <li class="work-items-tags">
+            <span class="text-node underlined animated">Identity, Product Design, Design System</span>
+          </li>
+          <li class="work-item-year">
+            <span class="text-node underlined animated">2018</span><span class="work-item-end"></span>
+          </li>
+        </ul>
+        <img src="assets/img/goods/goodsmockup.png" />
+      </a>
+    </li>
+    <li>
+      <li>
+        <a href="work/unfold.html">
+          <ul class="work-items">
+            <li><span class="text-node underlined animated">Unfold</span></li>
+            <li class="work-items-tags">
+              <span class="text-node underlined animated">Identity, Design System</span>
+            </li>
+            <li class="work-item-year">
+              <span class="text-node underlined animated">2017</span><span class="work-item-end"></span>
+            </li>
+          </ul>
+          <img src="assets/img/unfold/unfoldhome.svg" />
+        </a>
+      </li>
+      <li>
+      <a href="work/inydsr.html">
+        <ul class="work-items">
+          <li>
+            <span class="text-node underlined animated">Is The New York Dream Still Real?</span>
+          </li>
+          <li class="work-items-tags">
+            <span class="text-node underlined animated">Data Visualization, Installation, AR</span>
+          </li>
+          <li class="work-item-year">
+            <span class="text-node underlined animated">2017</span><span class="work-item-end"></span>
+          </li>
+        </ul>
+        <img src="assets/img/itnydsr/showcase.jpg" />
+      </a>
+    </li>
+    <li>
+      <a href="work/posters.html">
+        <ul class="work-items">
+          <li><span class="text-node underlined animated">Misc.</span></li>
+          <li class="work-items-tags">
+            <span class="text-node underlined animated">Posters, Typefaces In Progress</span>
+          </li>
+          <li class="work-item-year">
+            <span class="text-node underlined animated">2016 - ???</span><span class="work-item-end"></span>
+          </li>
+        </ul>
+        <img src="assets/img/posters/lordraja_forwebsite.png" />
+      </a>
+    </li>
+  </ul>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+
 </html>

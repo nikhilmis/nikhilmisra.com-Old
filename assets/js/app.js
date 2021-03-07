@@ -1,29 +1,39 @@
-$(".work li a").mousemove(function(e) {
-  $(this).find("img").css("top",e.clientY+50+"px").css("left",e.clientX+350+"px");
+$(".header-expand-bio").on('click', function () {
+    const moreText = "(...More Information)";
+    const hideText = "(Hide Information...)";
+    const show = $(this).html() === moreText;
+    $(this).html($(this).html() === moreText ? hideText : moreText);
+
+    $(".header-expanded-bio, .header-details").animate({
+        marginTop: show ? 22 : 0,
+        marginBottom: show ? 22 : 0,
+        opacity: show ? 1 : 0,
+        maxHeight: show ? 500 : 0,
+
+    },
+        250
+    )
+    $(".header-expanded-bio, .header-details").toggleClass("header-hide");
 })
 
-$('.slides').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  fade: false,
-  dots: true,
-  nextArrow: "<div class='slick-next'><div class='cursor-arrow'></div></div>",
-  prevArrow: "<div class='slick-prev'><div class='cursor-arrow'></div></div>",
+$(".work li a").mousemove(function (e) {
+    $(this).find("img").css("top", e.clientY + 50 + "px").css("left", e.clientX + 200 + "px");
+})
+
+document.addEventListener('selectionchange', function () {
+    blurNonSelection();
 });
 
-$(".slick-arrow").mousemove(function(e) {
-  $(this).find(".cursor-arrow").css("top",e.clientY+"px").css("left",e.clientX+"px");
-})
+function blurNonSelection() {
+    document.body.classList.remove('blur');
 
-var waypoint = new Waypoint({
-  element: $('#project'),
-  handler: function(direction) {
-    if (direction == "down") {
-      $( "header" ).addClass( "invert" );
-    } else {
-      $( "header" ).removeClass( "invert" );
+    let text = "";
+    let selection = window.getSelection();
+    if (selection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
     }
-  },
-  offset: $('header').innerHeight()
-})
+
+    if (text.length > 0) document.body.classList.add('blur');
+}

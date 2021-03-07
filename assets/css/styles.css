@@ -1,89 +1,46 @@
-:root {
-  --underline-width: 80%;
-}
+@import './shared.css';
 
-* {
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "GerstnerProgramm";
-  src: url("./../fonts/GerstnerProgramm.otf"); /* IE9 Compat Modes */
-}
-
-@font-face {
-  font-family: "GerstnerProgrammItalic";
-  src: url("./../fonts/GerstnerProgrammItalic.otf"); /* IE9 Compat Modes */
-}
+/* General */
 
 body {
-  font-size: 22px;
-  font-family: "GerstnerProgramm", sans-serif;
-  background: #000000;
-  color: #ffffff;
-  letter-spacing: 1px;
+  background: var(--black);
+  letter-spacing: 0.5px;
+  overflow: hidden;
   padding-top: 25px;
+  margin: 0 25px;
+}
+
+body, a {
+  color: var(--white);
+}
+
+p a,
+p span.underlined {
+  display: inline-block;
 }
 
 ::selection {
-  color: black;
-  background-color: white;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 2px;
+  text-shadow: unset;
 }
 
-@media (min-width: 480px) {
-  body {
-    margin: 0 25px;
-  }
+.blur {
+  text-shadow: var(--blur-text-shadow) rgba(255, 255, 255, var(--blur-text-opacity));
 }
 
 @media (max-width: 960px) {
   body {
     font-size: 20px;
-    line-height: 24px;
+    margin: 0 2em;
   }
 }
-
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-header a {
-  display: inline-block;
-}
-
-header a:hover {
-  font-style: italic;
-}
-
-header a:after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
-}
-
-header a:hover:after {
-  width: 100%;
-  background: #ffffff;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+/* Work styles */
 
 .work {
   margin-top: 100px;
+  user-select: none;
 }
 
 .work li {
@@ -93,10 +50,6 @@ li {
 .work li a {
   display: inline-block;
   width: 100%;
-}
-
-.work li a:hover {
-  font-style: italic;
 }
 
 .work img {
@@ -120,18 +73,8 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); 
 }
 
-.text-node:after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: transparent;
-  width: 0%;
-  transition: width 1s ease, background-color 1s ease;
-}
-
 .work-items:hover .text-node:after {
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
 }
 
@@ -142,7 +85,6 @@ li {
   flex-direction: row;
   align-items: flex-end;
 }
-
 
 @media (min-width: 960px) {
   .work-items .work-items-tags {
@@ -157,126 +99,5 @@ li {
 @media (max-width: 960px) {
   .work-items .work-item-year {
     justify-content: flex-start;
-  }
-}
-
-.mobile {
-  display: none;
-}
-
-.myname {
-  line-height: 1.3;
-}
-
-.aboutme {
-  text-align: left;
-  font-size: 22px;
-  margin: 100px 350px 100px 0;
-  line-height: 1.5;
-  position: relative;
-  z-index: 2;
-  width: 550px;
-}
-
-.aboutme a:hover {
-  font-style: italic;
-}
-
-.aboutme a {
-  display: inline-block;
-}
-
-.aboutme a:after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: #ffffff;
-  width: 100%;
-}
-
-.aboutme a:hover:after {
-  width: 100%;
-  background: #ffffff;
-}
-.meme {
-  position: relative;
-}
-
-.foundme {
-  position: absolute;
-  right: 200px;
-  left: 200px;
-  top: 0px;
-  z-index: -1;
-}
-
-.foundme img {
-  width: 1000px;
-}
-
-.foundme .animated {
-  display: block;
-}
-
-.findme {
-  text-align: left;
-  font-size: 22px;
-  padding-top: -40px;
-  margin: 75px 0px 20px 0;
-  width: 550px;
-}
-
-.findmelinks li {
-  margin-top: 5px;
-  padding: 2px;
-}
-
-.findmelinks a {
-  display: inline-block;
-}
-
-.findmelinks a:hover {
-  font-style: italic;
-}
-
-
-.findmelinks a:after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: #ffffff;
-  width: 100%;
-}
-
-@media only screen and (max-width: 1125px) {
-  .thoughtful {
-    display: none;
-  }
-  .mobile {
-    display: block;
-  }
-  .myname {
-    width: 320px;
-  }
-  .aboutme,
-  .findme {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    z-index: 2;
-    font-size: 20px;
-  }
-
-  .foundme {
-    position: absolute;
-    left: 10px;
-    top: 2000px;
-    z-index: -1;
-  }
-
-  .aboutme a:hover:after {
-    display: none;
   }
 }

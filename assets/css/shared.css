@@ -1,0 +1,84 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --offwhite: #fefcf7;
+  --background-color: var(--black);
+  --text-color: var(--black);
+  --blur-text-shadow: 0 0 5px;
+  --blur-text-opacity: 0.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GerstnerProgramm";
+  src: url("./../fonts/GerstnerProgrammRegular.otf"); 
+}
+
+@font-face {
+  font-family: "GerstnerProgrammItalic";
+  src: url("./../fonts/GerstnerProgrammRegularItalic.otf"); 
+}
+
+body {
+  font-family: "GerstnerProgramm", sans-serif;
+  font-size: 22px;
+}
+
+body a:hover {
+  font-style: italic;
+}
+
+/* Blur effect  */
+.blur {
+  color: transparent;
+  text-shadow: var(--blur-text-shadow) rgba(0, 0, 0, var(--blur-text-opacity));
+}
+
+.blur a {
+  color: transparent;
+}
+
+.blur ::after,
+.blur img {
+  filter: blur(3px);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ /* Underline effects */
+
+.underlined {
+  position: relative;
+}
+
+.underlined:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 1.8px;
+  width: 100%;
+  background: var(--white);
+}
+
+.underlined.animated:after {
+  transition: width 0.8s ease, background-color 0.8s ease;
+  background: transparent;
+  width: 0%;
+}
