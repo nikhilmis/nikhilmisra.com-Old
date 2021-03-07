@@ -2,6 +2,10 @@
   --black: #000;
   --white: #fff;
   --offwhite: #fefcf7;
+  --background-color: var(--black);
+  --text-color: var(--black);
+  --blur-text-shadow: 0 0 5px;
+  --blur-text-opacity: 0.5;
 }
 
 * {
@@ -10,12 +14,12 @@
 
 @font-face {
   font-family: "GerstnerProgramm";
-  src: url("./../fonts/GerstnerProgrammRegular.otf"); /* IE9 Compat Modes */
+  src: url("./../fonts/GerstnerProgrammRegular.otf"); 
 }
 
 @font-face {
   font-family: "GerstnerProgrammItalic";
-  src: url("./../fonts/GerstnerProgrammRegularItalic.otf"); /* IE9 Compat Modes */
+  src: url("./../fonts/GerstnerProgrammRegularItalic.otf"); 
 }
 
 body {
@@ -25,6 +29,17 @@ body {
 
 body a:hover {
   font-style: italic;
+}
+
+/* Blur effect  */
+.blur {
+  color: transparent;
+  text-shadow: var(--blur-text-shadow) rgba(0, 0, 0, var(--blur-text-opacity));
+}
+
+.blur ::after,
+img.blur {
+  filter: blur(3px);
 }
 
 a {
@@ -39,10 +54,7 @@ li {
   padding: 0;
 }
 
-mark {
-  background-color: transparent;
-  color: inherit;
-}
+ /* Underline effects */
 
 .underlined {
   position: relative;

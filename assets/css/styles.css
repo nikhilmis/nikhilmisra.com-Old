@@ -6,6 +6,8 @@ body {
   background: var(--black);
   letter-spacing: 0.5px;
   overflow: hidden;
+  padding-top: 25px;
+  margin: 0 25px;
 }
 
 body, a {
@@ -17,42 +19,15 @@ p span.underlined {
   display: inline-block;
 }
 
-::selection,
-.highlighted {
+::selection {
   color: var(--black);
   background-color: var(--white);
   border-radius: 2px;
+  text-shadow: unset;
 }
 
-span.highlighted,
-span.blur {
-  display: inline !important;
-}
-
-.cloneParagraph {
-  margin: 22px 0 22px 0;
-}
-
-.cloneParagraph:only-child {
-  margin: 0;
-}
-
-.highlighted-paragraph {
-  display: inline-block;
-}
-
-.hideHighlightedElement {
-  opacity: 0 !important;
-}
-
-.cloneParagraph,
-.hideHighlightedElement {
-  pointer-events: none;
-  cursor: default;
-}
-
-.notSelectable {
-  user-select: none;
+.blur {
+  text-shadow: var(--blur-text-shadow) rgba(255, 255, 255, var(--blur-text-opacity));
 }
 
 @media (max-width: 960px) {
@@ -61,23 +36,6 @@ span.blur {
     margin: 0 2em;
   }
 }
-
-.blur-wrapper {
-  padding-top: 25px;
-  margin: 0 25px;
-}
-
-@media (max-width: 960px) {
-  .blur-wrapper {
-    margin: 0px;
-  }
-}
-
-.blur,
-.blur-span {
-  filter: blur(3px);
-}
-
 /* Work styles */
 
 .work {
