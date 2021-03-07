@@ -37,8 +37,12 @@ body a:hover {
   text-shadow: var(--blur-text-shadow) rgba(0, 0, 0, var(--blur-text-opacity));
 }
 
+.blur a {
+  color: transparent;
+}
+
 .blur ::after,
-img.blur {
+.blur img {
   filter: blur(3px);
 }
 

@@ -25,7 +25,7 @@ document.addEventListener('selectionchange', function () {
 });
 
 function blurNonSelection() {
-    $('.blur').removeClass('blur');
+    document.body.classList.remove('blur');
 
     let text = "";
     let selection = window.getSelection();
@@ -35,8 +35,5 @@ function blurNonSelection() {
         text = document.selection.createRange().text;
     }
 
-    if (text.length > 0) {
-        const allNodes = Array.from(document.body.getElementsByTagName('*'));
-        allNodes.forEach(node => node.classList.add('blur'));
-    }
+    if (text.length > 0) document.body.classList.add('blur');
 }
