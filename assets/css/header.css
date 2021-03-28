@@ -44,7 +44,6 @@
 
 .header-info {
   margin-left: auto;
-  text-align: end;
   display: flex;
   flex-direction: column;
 }
