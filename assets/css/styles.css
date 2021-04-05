@@ -51,7 +51,8 @@ p span.underlined {
   width: 100%;
 }
 
-.work img {
+.work img,
+.work video {
   width: 1100px;
   position: fixed;
   top: 200px;
@@ -62,7 +63,8 @@ p span.underlined {
   transform: translate(-50%, -50%);
 }
 
-.work li a:hover img {
+.work li a:hover img,
+.work li a:hover video {
   opacity: 0.6;
 }
 

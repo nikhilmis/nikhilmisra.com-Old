@@ -17,7 +17,19 @@ $(".header-expand-bio").on('click', function () {
 })
 
 $(".work li a").mousemove(function (e) {
-    $(this).find("img").css("top", e.clientY + 50 + "px").css("left", e.clientX + 200 + "px");
+    $(this).find("img, video").css("top", e.clientY + 50 + "px").css("left", e.clientX + 200 + "px");
+})
+
+$(".work li a").mouseover(function (e) {
+    $(this).find("video").attr("autoplay", "true");
+})
+
+$(".work li a").mouseout(function (e) {
+    var video = $(this).find("video");
+    video.removeAttr("autoplay");
+    if (video.length > 0) {
+        video[0].currentTime = 0;
+    }
 })
 
 document.addEventListener('selectionchange', function () {
