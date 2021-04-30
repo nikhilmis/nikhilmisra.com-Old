@@ -14,10 +14,6 @@ html {
   max-width: 33%;
 }
 
-.header p:first-child {
-  margin-top: 0;
-}
-
 .header .header-details {
   margin-left: 100px;
 }
@@ -41,7 +37,11 @@ html {
   width: 100% !important;
 }
 
-.header-expanded-bio {
+.header-expanded-bio p:first-child {
+  margin-top: 0;
+}
+
+.header-expanded-bio p:not(:first-child) {
   text-indent: 2ch;
 }
 
