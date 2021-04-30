@@ -13,7 +13,12 @@ $(".header-expand-bio").on('click', function () {
     },
         250
     )
+    const root = document.documentElement;
     $(".header-expanded-bio, .header-details").toggleClass("header-hide");
+    root.style.setProperty('--expanded-header-max-height', show ? 500 : 0);
+    root.style.setProperty('--expanded-header-opacity', show ? 1 : 0);
+    root.style.setProperty('--expanded-header-marginTop', show ? '22px' : 0);
+    root.style.setProperty('--expanded-header-marginBottom', show ? '22px' : 0);
 })
 
 $(".work li a").mousemove(function (e) {
