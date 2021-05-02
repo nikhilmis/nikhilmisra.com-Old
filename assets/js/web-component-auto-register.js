@@ -38,8 +38,6 @@
               const t = document.defaultView.getComputedStyle(this.container, null).getPropertyValue("line-height"),
                   e = Math.floor(parseFloat(t)),
                   n = Math.floor(this.containerBounds.height / e);
-                  console.log(t, e, n)
-                  console.log(Array(n).fill().map(((t,n)=>{const i=n*e,s=i+e/2;return n%2==0?`100% ${i}px, 100% ${i+e}px,`:`0% ${s}px, 0% ${s}px,`})).join(""))
               return `${Array(n).fill().map(((t,n)=>{const i=n*e,s=i+e/2;return n%2==0?`100% ${i}px, 100% ${i+e}px,`:`0% ${s}px, 0% ${s}px,`})).join("")} 100% ${n*e}px`
           }
           get cssProperties() {
@@ -50,7 +48,7 @@
                   width: "var(--ragging-width, 1em)",
                   height: `${this.containerBounds.height}px`,
                   float: "right",
-                  background: "blue"
+                  background: "transparent"
               }
           }
           sizeListenerCallback = t => {
@@ -75,7 +73,7 @@
           constructor() {
               super();
               const e = this.attachShadow({
-                  mode: "closed"
+                  mode: "open"
               });
               this.exclusion = e.appendChild(document.createElement("div")), this.textRoot = e.appendChild(document.createElement("div")), this.textRoot.innerHTML = this.innerHTML, this.ragger = new t({
                   container: this.textRoot,

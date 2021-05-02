@@ -1,25 +1,19 @@
+// Header animations
+
 $(".header-expand-bio").on('click', function () {
     const moreText = "(...More Information)";
     const hideText = "(Hide Information...)";
     const show = $(this).html() === moreText;
     $(this).html($(this).html() === moreText ? hideText : moreText);
 
-    $(".header-expanded-bio, .header-details").animate({
-        marginTop: show ? 22 : 0,
-        marginBottom: show ? 22 : 0,
-        opacity: show ? 1 : 0,
-        maxHeight: show ? 500 : 0,
-
-    },
-        250
-    )
     const root = document.documentElement;
-    $(".header-expanded-bio, .header-details").toggleClass("header-hide");
-    root.style.setProperty('--expanded-header-max-height', show ? 500 : 0);
+    root.style.setProperty('--expanded-header-max-height', show ? '500px' : 0);
     root.style.setProperty('--expanded-header-opacity', show ? 1 : 0);
     root.style.setProperty('--expanded-header-marginTop', show ? '22px' : 0);
     root.style.setProperty('--expanded-header-marginBottom', show ? '22px' : 0);
 })
+
+// Hoverable image and videos
 
 $(".work li a").mousemove(function (e) {
     $(this).find("img, video").css("top", e.clientY + 50 + "px").css("left", e.clientX + 200 + "px");
@@ -37,12 +31,16 @@ $(".work li a").mouseout(function (e) {
     }
 })
 
+// Blur-on-highlight effect
+
 document.addEventListener('selectionchange', function () {
     blurNonSelection();
 });
 
 function blurNonSelection() {
     document.body.classList.remove('blur');
+    const shadowRoot = document.querySelector('mechanical-ragger').shadowRoot;
+    shadowRoot.childNodes.forEach(child => child.classList.remove('blur'));
 
     let text = "";
     let selection = window.getSelection();
@@ -52,5 +50,8 @@ function blurNonSelection() {
         text = document.selection.createRange().text;
     }
 
-    if (text.length > 0) document.body.classList.add('blur');
+    if (text.length > 0) {
+        document.body.classList.add('blur')
+        shadowRoot.childNodes.forEach(child => child.classList.add('blur'));
+    } ;
 }
