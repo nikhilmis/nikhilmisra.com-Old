@@ -109,6 +109,7 @@ header a {
 .project_description {
   text-align: left;
   width: 600px;
+  margin: 0;
 }
 
 .project_content {
@@ -161,7 +162,5 @@ header a {
     padding-left: 25px;
     padding-right: 25px;
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
   }
 }

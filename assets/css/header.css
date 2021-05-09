@@ -1,3 +1,12 @@
+html {
+  --expanded-header-max-height: 0;
+  --expanded-header-opacity: 0;
+  --expanded-header-marginTop: 0;
+  --expanded-header-marginBottom: 0;
+  --expand-transition-length: 0.5s;
+  --expand-transition-type: cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+
 .header {
   display: flex;
   justify-content: flex-start;
@@ -5,10 +14,6 @@
 
 .header > * {
   max-width: 33%;
-}
-
-.header p:first-child {
-  margin-top: 0;
 }
 
 .header .header-details {
@@ -24,8 +29,7 @@
   display: inline-block;
 }
 
-.header-hoverable:hover,
-.header-expand-bio:hover {
+.header-hoverable:hover {
   font-style: italic;
 }
 
@@ -34,7 +38,15 @@
   width: 100% !important;
 }
 
-.header-expanded-bio {
+.header p:first-child {
+  margin-top: 0;
+}
+
+.header-expanded-bio p:first-child {
+  margin-top: 0;
+}
+
+.header-expanded-bio p:not(:first-child) {
   text-indent: 2ch;
 }
 
@@ -42,10 +54,29 @@
   text-indent: 0;
 }
 
+.header-details {
+  transition: max-height var(--expand-transition-length) var(--expand-transition-type), opacity var(--expand-transition-length) var(--expand-transition-type);
+  opacity: var(--expanded-header-opacity);
+  max-height: var(--expanded-header-max-height);
+}
+
+.header-details p {
+  transition: margin-top var(--expand-transition-length) var(--expand-transition-type), margin-bottom var(--expand-transition-length) var(--expand-transition-type);
+  margin-bottom: var(--expanded-header-marginBottom);
+}
+
+.header-details p:not(:first-child) {
+  margin-top: var(--expanded-header-marginTop); 
+}
+
 .header-info {
   margin-left: auto;
   display: flex;
   flex-direction: column;
+}
+
+.header-info p:first-child {
+  margin-top: 0;
 }
 
 @media (max-width: 960px) {
@@ -74,19 +105,18 @@
 }
 
 .header-hide {
-  max-height: 0;
-  opacity: 0;
-  user-select: none;
+  max-height: var(--expanded-header-max-height);
+  opacity: var(--expanded-header-opacity);
 }
 
 .header-hide.header-expanded-bio {
-  transition: margin 0.25s ease-in-out;
-  margin: 0;
+  transition: margin-top var(--expand-transition-length) var(--expand-transition-type), margin-bottom var(--expand-transition-length) var(--expand-transition-type), max-height var(--expand-transition-length) var(--expand-transition-type), opacity var(--expand-transition-length) var(--expand-transition-type);
+  margin-top: var(--expanded-header-marginTop);
+  margin-bottom: var(--expanded-header-marginBottom);
 }
 
 .header-show.header-show:not(.hideHighlightedElement),
 .header-hide:not(.hideHighlightedElement) {
-  transition: max-height 0.25s ease-in-out;
   overflow: hidden;
 }
 

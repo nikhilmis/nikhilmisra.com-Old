@@ -25,10 +25,7 @@
 body {
   font-family: "GerstnerProgramm", sans-serif;
   font-size: 22px;
-}
-
-body a:hover {
-  font-style: italic;
+  line-height: 28px;
 }
 
 /* Blur effect  */
@@ -37,7 +34,7 @@ body a:hover {
   text-shadow: var(--blur-text-shadow) rgba(0, 0, 0, var(--blur-text-opacity));
 }
 
-.blur a {
+.blur a, .blur * a {
   color: transparent;
 }
 
@@ -50,6 +47,9 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  font-style: italic;
+}
 
 ul,
 li {
