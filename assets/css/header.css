@@ -29,10 +29,6 @@ html {
   display: inline-block;
 }
 
-.header-hoverable:hover {
-  font-style: italic;
-}
-
 .header-hoverable:hover:after {
   background: var(--white) !important;
   width: 100% !important;

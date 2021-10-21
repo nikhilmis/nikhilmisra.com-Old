@@ -47,10 +47,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  font-style: italic;
-}
-
 ul,
 li {
   list-style: none;
