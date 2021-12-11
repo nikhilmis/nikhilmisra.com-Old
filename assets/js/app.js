@@ -39,7 +39,12 @@ document.addEventListener('selectionchange', function () {
 
 function blurNonSelection() {
     document.body.classList.remove('blur');
-    const shadowRoot = document.querySelector('mechanical-ragger').shadowRoot;
+    const shadowRoot = document.querySelector('mechanical-ragger')?.shadowRoot;
+
+    if (!shadowRoot) {
+        return undefined;
+    }
+
     shadowRoot.childNodes.forEach(child => child.classList.remove('blur'));
 
     let text = "";
