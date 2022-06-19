@@ -1,27 +1,27 @@
 /* Header styles */
 
 body {
-  background-color: var(--offwhite);
+    background-color: var(--offwhite);
 }
 
 header {
-  color: var(--black);
+    color: var(--black);
 }
 
 header a:hover:after {
-  background: var(--black) !important;
-  width: 100% !important;
+    background: var(--black) !important;
+    width: 100% !important;
 }
 
 /* Hero styles */
 .hero_container {
-  background: var(--offwhite);
-  padding: 150px 0px 100px 0px;
+    background: var(--offwhite);
+    padding: 150px 0px 100px 0px;
 }
 
 .hero_container img {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 25px;
-  padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
 }

@@ -1,5 +1,5 @@
 (function getFooter() {
-  document.getElementById("footer").innerHTML = `<div class="footernav">
+    document.getElementById('footer').innerHTML = `<div class="footernav">
   <ul class="workfooter">
     <li class="footer"><a href="houstonchronicle.html" class="underlined animated">Houston Chronicle</a></li>
     <li class="footer"><a href="unfold.html" class="underlined animated">Unfold</a></li>
@@ -9,4 +9,4 @@
     <li class="footer"><a href="posters.html" class="underlined animated">Posters</a></li>
   </ul>
 </div>`;
-})()
+})();

@@ -1,36 +1,36 @@
 /* Header styles */
 header {
-  mix-blend-mode: exclusion;
-  z-index: 100;
+    mix-blend-mode: exclusion;
+    z-index: 100;
 }
 
 header a {
-  color: var(--white);
+    color: var(--white);
 }
 
 header a:hover:after {
-  background: var(--white) !important;
-  width: 100% !important;
+    background: var(--white) !important;
+    width: 100% !important;
 }
 
 /* Background color is set in a wrapper to make sure it's a sibling to header, so that they can blend */
 .backgroundWrapper {
-  background-color: var(--offwhite);
-  width: 100%;
-  height: 100%;
+    background-color: var(--offwhite);
+    width: 100%;
+    height: 100%;
 }
 
 /* Hero styles */
 .hero_wrapper,
 .hero_container {
-  background: var(--black);
+    background: var(--black);
 }
 
 .hero_container {
-  padding: 50px 50px 50px 50px;
-  width: 100%;
+    padding: 50px 50px 50px 50px;
+    width: 100%;
 }
 
 .hero_container img {
-  margin: 100px auto;
+    margin: 100px auto;
 }
