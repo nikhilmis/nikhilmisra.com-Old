@@ -1,16 +1,4 @@
 <script>
-    import field from '$lib/assets/img/goods/field.png';
-    import goodsfull from '$lib/assets/img/goods/goodsfull.png';
-    import goodslogo from '$lib/assets/img/goods/goodslogo.svg';
-    import me from '$lib/assets/img/goods/me.png';
-    import postits from '$lib/assets/img/goods/postits.png';
-    import midfi from '$lib/assets/img/goods/midfi.png';
-    import sketchesgoods from '$lib/assets/img/goods/sketchesgoods.jpg';
-    import lofi from '$lib/assets/img/goods/lofi.png';
-    import sellingflow from '$lib/assets/img/goods/sellingflow.png';
-    import homepage from '$lib/assets/img/goods/homepage.png';
-    import goodsnav from '$lib/assets/img/goods/goodsnav.png';
-    import checkout from '$lib/assets/img/goods/checkout.png';
     import Carousel from '$lib/components/Carousel.svelte';
     import HeroImage from '$lib/components/HeroImage.svelte';
     import Image from '$lib/components/Image.svelte';
@@ -19,7 +7,7 @@
     import ProjectInfo from '$lib/components/ProjectInfo.svelte';
 </script>
 
-<HeroImage src={goodslogo} alt="Goods logo" />
+<HeroImage src={'/img/goods/goodslogo.svg'} alt="Goods logo" />
 <ProjectContainer>
     <ProjectInfo
         title={'Goods'}
@@ -33,13 +21,13 @@
             different organizations every 2-3 months to maximize social impact.
         </Paragraph>
     </ProjectInfo>
-    <Image src={goodsfull} alt={'Screenshot of the Goods. website'} />
+    <Image src={'/img/goods/goodsfull.png'} alt={'Screenshot of the Goods. website'} />
     <Carousel
         uniqueTitle={'process'}
         images={[
-            { src: me, alt: 'Me' },
-            { src: postits, alt: 'Postits' },
-            { src: field, alt: 'In the field.' },
+            { src: '/img/goods/me.png', alt: 'Me' },
+            { src: '/img/goods/postits.png', alt: 'Postits' },
+            { src: '/img/goods/field.png', alt: 'In the field.' },
         ]}
     />
     <Paragraph>
@@ -54,9 +42,9 @@
     <Carousel
         uniqueTitle={'screenshots'}
         images={[
-            { src: midfi, alt: 'Midfi' },
-            { src: sketchesgoods, alt: 'Sketches Goods' },
-            { src: lofi, alt: 'Lo-fi' },
+            { src: '/img/goods/midfi.png', alt: 'Midfi' },
+            { src: '/img/goods/sketchesgoods.jpg', alt: 'Sketches Goods' },
+            { src: '/img/goods/lofi.png', alt: 'Lo-fi' },
         ]}
     />
     <Paragraph>
@@ -66,14 +54,14 @@
         After conducting research, I went through a couple rounds of wireframing and prototyping. Throughout
         each step of the process, changes were constantly made to the product.
     </Paragraph>
-    <Image src={homepage} alt={'Goods homepage'} />
-    <Image src={sellingflow} alt={'Goods selling flow'} />
+    <Image src={'/img/goods/homepage.png'} alt={'Goods homepage'} />
+    <Image src={'/img/goods/sellingflow.png'} alt={'Goods selling flow'} />
     <Paragraph
         >The selling feature was designed to be simple to use. Any type of user can sell on Goods.,
         from a streetwear reselling veteran to someone selling something for the very first time.
     </Paragraph>
-    <Image src={goodsnav} alt={'Goods navigation'} />
-    <Image src={checkout} alt={'Goods checkout'} />
+    <Image src={'/img/goods/goodsnav.png'} alt={'Goods navigation'} />
+    <Image src={'/img/goods/checkout.png'} alt={'Goods checkout'} />
     <Paragraph
         >The highlight feature of Goods. is the ability to donate a portion of the purchase to one
         of our organization partners. The user can read more information on our current partners and

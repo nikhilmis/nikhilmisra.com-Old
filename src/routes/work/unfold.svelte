@@ -1,14 +1,4 @@
 <script>
-    import unfoldlogo from '$lib/assets/img/unfold/unfoldlogo.svg';
-    import typeface from '$lib/assets/img/unfold/typeface.svg';
-    import unfoldwebsite1 from '$lib/assets/img/unfold/unfoldwebsite1.png';
-    import unfoldwebsite2 from '$lib/assets/img/unfold/unfoldwebsite2.png';
-    import unfoldwebsite from '$lib/assets/img/unfold/unfoldwebsite.mp4';
-    import websitemobile from '$lib/assets/img/unfold/websitemobile.png';
-    import unfoldenvironment from '$lib/assets/img/unfold/unfoldenviroment.jpg';
-    import environmental4 from '$lib/assets/img/unfold/enviromental4.png';
-    import unfoldarchivessplash from '$lib/assets/img/unfold/unfoldarchivesplash.png';
-    import unfoldarchive from '$lib/assets/img/unfold/unfoldarchive.png';
     import Carousel from '$lib/components/Carousel.svelte';
     import HeroImage from '$lib/components/HeroImage.svelte';
     import Image from '$lib/components/Image.svelte';
@@ -17,7 +7,7 @@
     import ProjectInfo from '$lib/components/ProjectInfo.svelte';
 </script>
 
-<HeroImage src={unfoldlogo} alt="Unfold logo" backgroundColor="var(--black)" />
+<HeroImage src={'/img/unfold/unfoldlogo.svg'} alt="Unfold logo" backgroundColor="var(--black)" />
 <ProjectContainer>
     <ProjectInfo
         title={'Unfold'}
@@ -33,15 +23,15 @@
             design. In Collaboration With: Sheila Cheng and Diana Meijia.
         </Paragraph>
     </ProjectInfo>
-    <Image src={typeface} alt={'A diverse future for all of us.'} />
+    <Image src={'/img/unfold/typeface.svg'} alt={'A diverse future for all of us.'} />
     <Paragraph
         >As part of the conference's identity, we designed a typeface based on paper folding.
     </Paragraph>
     <Carousel
         uniqueTitle={'typeface'}
         images={[
-            { src: unfoldwebsite1, alt: 'Unfold website' },
-            { src: unfoldwebsite2, alt: 'Unfold website in Chinese' },
+            { src: '/img/unfold/unfoldwebsite1.png', alt: 'Unfold website' },
+            { src: '/img/unfold/unfoldwebsite2.png', alt: 'Unfold website in Chinese' },
         ]}
     />
     <Paragraph
@@ -51,17 +41,17 @@
     <!-- Caption not needed as video has no sound -->
     <!-- svelte-ignore a11y-media-has-caption -->
     <video class="video" id="video-style" controls="" width="100%" height="auto">
-        <source src={unfoldwebsite} type="video/mp4" />
+        <source src={'/video/unfold/unfoldwebsite.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
     </video>
-    <Image src={websitemobile} alt={'Mobile website screenshot'} />
-    <Image src={unfoldenvironment} alt={'Mockup of Unfold logo in different environments'} />
-    <Image src={environmental4} alt={'Mockup of Unfold logo in different environments'} />
+    <Image src={'/img/unfold/websitemobile.png'} alt={'Mobile website screenshot'} />
+    <Image src={'/img/unfold/unfoldenviroment.jpg'} alt={'Mockup of Unfold logo in different environments'} />
+    <Image src={'/img/unfold/enviromental4.png'} alt={'Mockup of Unfold logo in different environments'} />
     <Carousel
         uniqueTitle={'screenshots'}
         images={[
-            { src: unfoldarchivessplash, alt: 'Unfold splash screen' },
-            { src: unfoldarchive, alt: 'Unfold sign-up page' },
+            { src: '/img/unfold/unfoldarchivesplash.png', alt: 'Unfold splash screen' },
+            { src: '/img/unfold/unfoldarchive.png', alt: 'Unfold sign-up page' },
         ]}
     />
 </ProjectContainer>

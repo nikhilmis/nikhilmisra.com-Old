@@ -88,7 +88,7 @@
                     year: '2019 - Present',
                     asset: {
                         type: 'Image',
-                        src: goodsmockup,
+                        src: '/img/goods/goodsmockup.png',
                         alt: 'Goods homepage',
                     },
                 },
@@ -99,7 +99,7 @@
                     year: '2017',
                     asset: {
                         type: 'Video',
-                        src: unfoldwebsite,
+                        src: '/img/unfold/unfoldwebsite.mp4',
                     },
                 },
                 {
@@ -109,7 +109,7 @@
                     year: '2017',
                     asset: {
                         type: 'Image',
-                        src: showcase,
+                        src: '/img/itnydsr/showcase.jpg',
                         alt: 'INYDSR showcase',
                     },
                 },
@@ -120,7 +120,7 @@
                     year: '2016 - ???',
                     asset: {
                         type: 'Image',
-                        src: lordraja_fromwebsite,
+                        src: '/img/posters/lordraja_forwebsite.png',
                         alt: 'Lord Raja poster.',
                     },
                 },
