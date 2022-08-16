@@ -9,7 +9,7 @@
         background: var(--offwhite);
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1920px) {
         div {
             margin: 0 25px;
         }

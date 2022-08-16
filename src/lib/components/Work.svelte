@@ -60,6 +60,7 @@
         width: 100%;
         margin-top: 100px;
         overflow: hidden;
+        user-select: none;
     }
 
     .work a {
