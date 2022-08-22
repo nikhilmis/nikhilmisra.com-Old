@@ -1,13 +1,13 @@
 <script>
     import Carousel from '$lib/components/Carousel.svelte';
     import HeroImage from '$lib/components/HeroImage.svelte';
-    import Image from '$lib/components/Image.svelte';
+    import Image from 'svimg';
     import Paragraph from '$lib/components/Paragraph.svelte';
     import ProjectContainer from '$lib/components/ProjectContainer.svelte';
     import ProjectInfo from '$lib/components/ProjectInfo.svelte';
 </script>
 
-<HeroImage src={'/img/unfold/unfoldlogo.svg'} alt="Unfold logo" backgroundColor="var(--black)" />
+<HeroImage src="/img/unfold/unfoldlogo.svg" alt="Unfold logo" backgroundColor="var(--black)" />
 <ProjectContainer>
     <ProjectInfo
         title={'Unfold'}
@@ -23,7 +23,7 @@
             design. In Collaboration With: Sheila Cheng and Diana Meijia.
         </Paragraph>
     </ProjectInfo>
-    <Image src={'/img/unfold/typeface.svg'} alt={'A diverse future for all of us.'} />
+    <Image src="/img/unfold/typeface.svg" alt={'A diverse future for all of us.'} />
     <Paragraph
         >As part of the conference's identity, we designed a typeface based on paper folding.
     </Paragraph>
@@ -41,12 +41,18 @@
     <!-- Caption not needed as video has no sound -->
     <!-- svelte-ignore a11y-media-has-caption -->
     <video class="video" id="video-style" controls="" width="100%" height="auto">
-        <source src={'/video/unfold/unfoldwebsite.mp4'} type="video/mp4" />
+        <source src="/video/unfold/unfoldwebsite.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
-    <Image src={'/img/unfold/websitemobile.png'} alt={'Mobile website screenshot'} />
-    <Image src={'/img/unfold/unfoldenviroment.jpg'} alt={'Mockup of Unfold logo in different environments'} />
-    <Image src={'/img/unfold/enviromental4.png'} alt={'Mockup of Unfold logo in different environments'} />
+    <Image src="/img/unfold/websitemobile.png" alt={'Mobile website screenshot'} />
+    <Image
+        src="/img/unfold/unfoldenviroment.jpg"
+        alt={'Mockup of Unfold logo in different environments'}
+    />
+    <Image
+        src="/img/unfold/enviromental4.png"
+        alt={'Mockup of Unfold logo in different environments'}
+    />
     <Carousel
         uniqueTitle={'screenshots'}
         images={[

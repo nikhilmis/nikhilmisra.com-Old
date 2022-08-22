@@ -1,13 +1,13 @@
 <script>
     import Carousel from '$lib/components/Carousel.svelte';
     import HeroImage from '$lib/components/HeroImage.svelte';
-    import Image from '$lib/components/Image.svelte';
+    import Image from 'svimg';
     import Paragraph from '$lib/components/Paragraph.svelte';
     import ProjectContainer from '$lib/components/ProjectContainer.svelte';
     import ProjectInfo from '$lib/components/ProjectInfo.svelte';
 </script>
 
-<HeroImage src={'/img/goods/goodslogo.svg'} alt="Goods logo" />
+<HeroImage src='/img/goods/goodslogo.svg' alt="Goods logo" />
 <ProjectContainer>
     <ProjectInfo
         title={'Goods'}
@@ -21,7 +21,7 @@
             different organizations every 2-3 months to maximize social impact.
         </Paragraph>
     </ProjectInfo>
-    <Image src={'/img/goods/goodsfull.png'} alt={'Screenshot of the Goods. website'} />
+    <Image src='/img/goods/goodsfull.png' alt={'Screenshot of the Goods. website'} />
     <Carousel
         uniqueTitle={'process'}
         images={[
@@ -54,14 +54,14 @@
         After conducting research, I went through a couple rounds of wireframing and prototyping. Throughout
         each step of the process, changes were constantly made to the product.
     </Paragraph>
-    <Image src={'/img/goods/homepage.png'} alt={'Goods homepage'} />
-    <Image src={'/img/goods/sellingflow.png'} alt={'Goods selling flow'} />
+    <Image src='/img/goods/homepage.png' alt={'Goods homepage'} />
+    <Image src='/img/goods/sellingflow.png' alt={'Goods selling flow'} />
     <Paragraph
         >The selling feature was designed to be simple to use. Any type of user can sell on Goods.,
         from a streetwear reselling veteran to someone selling something for the very first time.
     </Paragraph>
-    <Image src={'/img/goods/goodsnav.png'} alt={'Goods navigation'} />
-    <Image src={'/img/goods/checkout.png'} alt={'Goods checkout'} />
+    <Image src='/img/goods/goodsnav.png' alt={'Goods navigation'} />
+    <Image src='/img/goods/checkout.png' alt={'Goods checkout'} />
     <Paragraph
         >The highlight feature of Goods. is the ability to donate a portion of the purchase to one
         of our organization partners. The user can read more information on our current partners and

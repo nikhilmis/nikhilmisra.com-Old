@@ -39,6 +39,8 @@
             return a & a;
         }, 0);
 
+    $: console.log(password, hash(password))
+
 </script>
 
 <svelte:head>

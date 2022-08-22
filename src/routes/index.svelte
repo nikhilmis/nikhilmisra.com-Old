@@ -1,10 +1,6 @@
 <script>
-    import goodsmockup from '$lib/assets/img/goods/goodsmockup.png';
-    import unfoldwebsite from '$lib/assets/img/unfold/unfoldwebsite.mp4';
-    import showcase from '$lib/assets/img/itnydsr/showcase.jpg';
-    import lordraja_fromwebsite from '$lib/assets/img/posters/lordraja_forwebsite.png';
-    import Work from '$lib/components/Work.svelte';
     import Paragraph from '$lib/components/Paragraph.svelte';
+    import Work from '$lib/components/Work.svelte';
 
     let isBioExpanded = false;
 

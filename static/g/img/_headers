@@ -1,0 +1,4 @@
+# applies to all paths
+/*
+  # allows cross-origin requests
+  Access-Control-Allow-Origin: *

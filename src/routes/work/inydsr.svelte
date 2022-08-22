@@ -1,13 +1,13 @@
 <script>
     import HeroImage from '$lib/components/HeroImage.svelte';
     import Carousel from '$lib/components/Carousel.svelte';
-    import Image from '$lib/components/Image.svelte';
+    import Image from 'svimg';
     import Paragraph from '$lib/components/Paragraph.svelte';
     import ProjectContainer from '$lib/components/ProjectContainer.svelte';
     import ProjectInfo from '$lib/components/ProjectInfo.svelte';
 </script>
 
-<HeroImage src={'/img/itnydsr/ITNYDSR.jpg'} alt="INYDSR logo" />
+<HeroImage src='/img/itnydsr/ITNYDSR.jpg' alt="INYDSR logo" />
 <ProjectContainer>
     <ProjectInfo
         title={'Is The New York Dream Still Real?'}
@@ -22,9 +22,9 @@
             conducted at the Parsons School Of Design as part of a Data Visualization exhibition.
         </Paragraph>
     </ProjectInfo>
-    <Image src={'/img/itnydsr/showcase.jpg'} alt={'Showcase'} />
+    <Image src='/img/itnydsr/showcase.jpg' alt={'Showcase'} />
     <Image
-        src={'/img/itnydsr/graph.gif'}
+        src='/img/itnydsr/graph.gif'
         alt={'Graph showing the annual decrease of refugees in NYC from 2002 to 2016.'}
     />
     <Paragraph
@@ -46,6 +46,6 @@
         Participants filling in the graph with their guesses and seeing the reveal. People spent
         time discussing the results after.
     </Paragraph>
-    <Image src={'/img/itnydsr/iphonear.png'} alt={'iPhone AR'} />
-    <Image src={'/img/itnydsr/arreveal.jpg'} alt={'AR Reveal'} />
+    <Image src='/img/itnydsr/iphonear.png' alt={'iPhone AR'} />
+    <Image src='/img/itnydsr/arreveal.jpg' alt={'AR Reveal'} />
 </ProjectContainer>
